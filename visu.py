@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-sns.set(style="whitegrid", palette="Set2")
+sns.set_style("white")
+
 
 # ======================
 # CPU DATA (each test = one bar)
@@ -118,5 +119,5 @@ plt.tight_layout()
 # ======================
 # SAVE
 # ======================
-plt.savefig("result.png", dpi=300)
+plt.savefig("result.png", dpi=300, transparent=True)
 plt.close()
