@@ -4,3 +4,5 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 python src/visualization.py
+
+rm -rf .venv
