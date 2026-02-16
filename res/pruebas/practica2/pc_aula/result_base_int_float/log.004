@@ -1,0 +1,4236 @@
+
+
+
+runspec started at Mon Feb  9 20:01:51 2026
+C:\speccpu2000\bin\runspec --reportable --config win32-x86-vc7.cfg -T base fp
+Identifying output formats...asc...config...html...pdf...ps...raw...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = vc7.x87.exe
+Size      = ref
+Machine   = default
+benchmarks= 168.wupwise,171.swim,172.mgrid,173.applu,177.mesa,178.galgel,179.art,183.equake,187.facerec,188.ammp,189.lucas,191.fma3d,200.sixtrack,301.apsi
+outputs   = raw,ASCII
+We will use: 168.wupwise, 171.swim, 172.mgrid, 173.applu, 177.mesa, 178.galgel, 179.art, 183.equake, 187.facerec, 188.ammp, 189.lucas, 191.fma3d, 200.sixtrack, 301.apsi
+Compiling Binaries
+
+-----------------------------------
+  Building 168.wupwise ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/168.wupwise/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = wupwise
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 168.wupwise
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = wupwise_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = wupwise
+nc               = 0
+num              = 168
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/168.wupwise
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '168.wupwise' started at:Mon Feb  9 20:01:52 2026 (1770663712)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Stop make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  wupwise wupwise.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\168.wupwise\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\168.wupwise\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Stop make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Fodcabs1.obj                dcabs1.f
+c -Fodlaran.obj                dlaran.f
+c -Fodlarnd.obj                dlarnd.f
+c -Fodznrm2.obj                dznrm2.f
+c -Fogammul.obj                gammul.f
+c -Foinit.obj                init.f
+c -Folsame.obj                lsame.f
+c -Fomatmul.obj                matmul.f
+c -Fomuldeo.obj                muldeo.f
+c -Fomuldoe.obj                muldoe.f
+c -Fophinit.obj                phinit.f
+c -Forndcnf.obj                rndcnf.f
+c -Forndphi.obj                rndphi.f
+c -Fosu3mul.obj                su3mul.f
+c -Fouinith.obj                uinith.f
+c -Fowupwise.obj                wupwise.f
+c -Foxerbla.obj                xerbla.f
+c -Fozaxpy.obj                zaxpy.f
+c -Fozcopy.obj                zcopy.f
+c -Fozdotc.obj                zdotc.f
+c -Fozgemm.obj                zgemm.f
+c -Fozscal.obj                zscal.f
+dcabs1.obj dlaran.obj dlarnd.obj dznrm2.obj gammul.obj init.obj lsame.obj matmul.obj muldeo.obj muldoe.obj phinit.obj rndcnf.obj rndphi.obj su3mul.obj uinith.obj wupwise.obj xerbla.obj zaxpy.obj zcopy.obj zdotc.obj zgemm.obj zscal.obj     -Fewupwise
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Fodcabs1.obj dcabs1.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dcabs1.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodlaran.obj dlaran.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dlaran.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodlarnd.obj dlarnd.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dlarnd.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodznrm2.obj dznrm2.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dznrm2.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogammul.obj gammul.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gammul.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foinit.obj init.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [init.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folsame.obj lsame.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lsame.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomatmul.obj matmul.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [matmul.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomuldeo.obj muldeo.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [muldeo.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomuldoe.obj muldoe.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [muldoe.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fophinit.obj phinit.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [phinit.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forndcnf.obj rndcnf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rndcnf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forndphi.obj rndphi.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rndphi.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosu3mul.obj su3mul.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [su3mul.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fouinith.obj uinith.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [uinith.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowupwise.obj wupwise.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [wupwise.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foxerbla.obj xerbla.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [xerbla.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fozaxpy.obj zaxpy.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [zaxpy.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fozcopy.obj zcopy.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [zcopy.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fozdotc.obj zdotc.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [zdotc.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fozgemm.obj zgemm.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [zgemm.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fozscal.obj zscal.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [zscal.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), dcabs1.obj dlaran.obj dlarnd.obj dznrm2.obj gammul.obj init.obj lsame.obj matmul.obj muldeo.obj muldoe.obj phinit.obj rndcnf.obj rndphi.obj su3mul.obj uinith.obj wupwise.obj xerbla.obj zaxpy.obj zcopy.obj zdotc.obj zgemm.obj zscal.obj -Fewupwise, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [wupwise] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/168.wupwise/run/00000001/make.err'
+  Error with make!
+  Compile for '168.wupwise' ended at:Mon Feb  9 20:01:52 2026 (1770663712)
+  Elapsed compile for '168.wupwise': 00:00:00 (0)
+*** Error building 168.wupwise
+
+-----------------------------------
+  Building 171.swim ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/171.swim/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 1e-006
+action           = validate
+backup_config    = 1
+baseexe          = swim
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 171.swim
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = swim_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = swim
+nc               = 0
+num              = 171
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/171.swim
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '171.swim' started at:Mon Feb  9 20:01:52 2026 (1770663712)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Stop make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  swim swim.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\171.swim\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\171.swim\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Stop make command: Mon Feb  9 20:01:52 2026 (1770663712)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Foswim.obj                swim.f
+swim.obj     -Feswim
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Foswim.obj swim.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [swim.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), swim.obj -Feswim, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [swim] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/171.swim/run/00000001/make.err'
+  Error with make!
+  Compile for '171.swim' ended at:Mon Feb  9 20:01:52 2026 (1770663712)
+  Elapsed compile for '171.swim': 00:00:00 (0)
+*** Error building 171.swim
+
+-----------------------------------
+  Building 172.mgrid ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/172.mgrid/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 1e-012
+action           = validate
+backup_config    = 1
+baseexe          = mgrid
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 172.mgrid
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = mgrid_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = mgrid
+nc               = 0
+num              = 172
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/172.mgrid
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.001
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '172.mgrid' started at:Mon Feb  9 20:01:53 2026 (1770663713)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Stop make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  mgrid mgrid.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\172.mgrid\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\172.mgrid\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Stop make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Fomgrid.obj                mgrid.f
+mgrid.obj     -Femgrid
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Fomgrid.obj mgrid.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [mgrid.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), mgrid.obj -Femgrid, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [mgrid] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/172.mgrid/run/00000001/make.err'
+  Error with make!
+  Compile for '172.mgrid' ended at:Mon Feb  9 20:01:53 2026 (1770663713)
+  Elapsed compile for '172.mgrid': 00:00:00 (0)
+*** Error building 172.mgrid
+
+-----------------------------------
+  Building 173.applu ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/173.applu/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = applu
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 173.applu
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = applu_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = applu
+nc               = 0
+num              = 173
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/173.applu
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.0001
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '173.applu' started at:Mon Feb  9 20:01:53 2026 (1770663713)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Stop make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  applu applu.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\173.applu\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\173.applu\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Stop make command: Mon Feb  9 20:01:53 2026 (1770663713)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Foapplu.obj                applu.f
+applu.obj     -Feapplu
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Foapplu.obj applu.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [applu.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), applu.obj -Feapplu, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [applu] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/173.applu/run/00000001/make.err'
+  Error with make!
+  Compile for '173.applu' ended at:Mon Feb  9 20:01:53 2026 (1770663713)
+  Elapsed compile for '173.applu': 00:00:00 (0)
+*** Error building 173.applu
+
+-----------------------------------
+  Building 177.mesa ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = C
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 6
+action           = validate
+backup_config    = 1
+baseexe          = mesa
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 177.mesa
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = mesa_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = mesa
+nc               = 0
+num              = 177
+obiwan           = 1
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/177.mesa
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 6
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '177.mesa' started at:Mon Feb  9 20:01:54 2026 (1770663714)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:54 2026 (1770663714)
+Stop make command: Mon Feb  9 20:01:54 2026 (1770663714)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  mesa mesa.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\177.mesa\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\177.mesa\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:54 2026 (1770663714)
+Stop make command: Mon Feb  9 20:01:57 2026 (1770663717)
+Elapsed time for make command: 00:00:03 (3)
+Output from make 'specmake  build > make.out 2> make.err':
+cl -c -Foaccum.obj              /Ox /GL /Op  accum.c
+accum.c
+cl -c -Foalpha.obj              /Ox /GL /Op  alpha.c
+alpha.c
+cl -c -Foalphabuf.obj              /Ox /GL /Op  alphabuf.c
+alphabuf.c
+cl -c -Foapi1.obj              /Ox /GL /Op  api1.c
+api1.c
+cl -c -Foapi2.obj              /Ox /GL /Op  api2.c
+api2.c
+cl -c -Foattrib.obj              /Ox /GL /Op  attrib.c
+attrib.c
+cl -c -Fobitmap.obj              /Ox /GL /Op  bitmap.c
+bitmap.c
+cl -c -Foblend.obj              /Ox /GL /Op  blend.c
+blend.c
+cl -c -Foclip.obj              /Ox /GL /Op  clip.c
+clip.c
+cl -c -Focolortab.obj              /Ox /GL /Op  colortab.c
+colortab.c
+cl -c -Focontext.obj              /Ox /GL /Op  context.c
+context.c
+cl -c -Focopypix.obj              /Ox /GL /Op  copypix.c
+copypix.c
+cl -c -Fodepth.obj              /Ox /GL /Op  depth.c
+depth.c
+cl -c -Fodlist.obj              /Ox /GL /Op  dlist.c
+dlist.c
+cl -c -Fodrawpix.obj              /Ox /GL /Op  drawpix.c
+drawpix.c
+cl -c -Foenable.obj              /Ox /GL /Op  enable.c
+enable.c
+cl -c -Foeval.obj              /Ox /GL /Op  eval.c
+eval.c
+cl -c -Fofeedback.obj              /Ox /GL /Op  feedback.c
+feedback.c
+cl -c -Fofog.obj              /Ox /GL /Op  fog.c
+fog.c
+cl -c -Foget.obj              /Ox /GL /Op  get.c
+get.c
+cl -c -Fohash.obj              /Ox /GL /Op  hash.c
+hash.c
+cl -c -Foimage.obj              /Ox /GL /Op  image.c
+image.c
+cl -c -Folight.obj              /Ox /GL /Op  light.c
+light.c
+cl -c -Folines.obj              /Ox /GL /Op  lines.c
+lines.c
+cl -c -Fologic.obj              /Ox /GL /Op  logic.c
+logic.c
+cl -c -Fomasking.obj              /Ox /GL /Op  masking.c
+masking.c
+cl -c -Fomatrix.obj              /Ox /GL /Op  matrix.c
+matrix.c
+cl -c -Fomisc.obj              /Ox /GL /Op  misc.c
+misc.c
+cl -c -Fommath.obj              /Ox /GL /Op  mmath.c
+mmath.c
+cl -c -Foosmesa.obj              /Ox /GL /Op  osmesa.c
+osmesa.c
+cl -c -Fopb.obj              /Ox /GL /Op  pb.c
+pb.c
+cl -c -Fopixel.obj              /Ox /GL /Op  pixel.c
+pixel.c
+cl -c -Fopointers.obj              /Ox /GL /Op  pointers.c
+pointers.c
+cl -c -Fopoints.obj              /Ox /GL /Op  points.c
+points.c
+cl -c -Fopolygon.obj              /Ox /GL /Op  polygon.c
+polygon.c
+cl -c -Foquads.obj              /Ox /GL /Op  quads.c
+quads.c
+cl -c -Forastpos.obj              /Ox /GL /Op  rastpos.c
+rastpos.c
+cl -c -Foreadpix.obj              /Ox /GL /Op  readpix.c
+readpix.c
+cl -c -Forect.obj              /Ox /GL /Op  rect.c
+rect.c
+cl -c -Foscissor.obj              /Ox /GL /Op  scissor.c
+scissor.c
+cl -c -Foshade.obj              /Ox /GL /Op  shade.c
+shade.c
+cl -c -Fospan.obj              /Ox /GL /Op  span.c
+span.c
+cl -c -Fostencil.obj              /Ox /GL /Op  stencil.c
+stencil.c
+cl -c -Foteximage.obj              /Ox /GL /Op  teximage.c
+teximage.c
+cl -c -Fotexobj.obj              /Ox /GL /Op  texobj.c
+texobj.c
+cl -c -Fotexstate.obj              /Ox /GL /Op  texstate.c
+texstate.c
+cl -c -Fotexture.obj              /Ox /GL /Op  texture.c
+texture.c
+cl -c -Fotriangle.obj              /Ox /GL /Op  triangle.c
+triangle.c
+cl -c -Fovarray.obj              /Ox /GL /Op  varray.c
+varray.c
+cl -c -Fovb.obj              /Ox /GL /Op  vb.c
+vb.c
+cl -c -Fovbfill.obj              /Ox /GL /Op  vbfill.c
+vbfill.c
+cl -c -Fovbrender.obj              /Ox /GL /Op  vbrender.c
+vbrender.c
+cl -c -Fovbxform.obj              /Ox /GL /Op  vbxform.c
+vbxform.c
+cl -c -Fowinpos.obj              /Ox /GL /Op  winpos.c
+winpos.c
+cl -c -Foxform.obj              /Ox /GL /Op  xform.c
+xform.c
+cl -c -Fomesa4.obj              /Ox /GL /Op  mesa4.c
+mesa4.c
+cl       /Ox /GL /Op  accum.obj alpha.obj alphabuf.obj api1.obj api2.obj attrib.obj bitmap.obj blend.obj clip.obj colortab.obj context.obj copypix.obj depth.obj dlist.obj drawpix.obj enable.obj eval.obj feedback.obj fog.obj get.obj hash.obj image.obj light.obj lines.obj logic.obj masking.obj matrix.obj misc.obj mmath.obj osmesa.obj pb.obj pixel.obj pointers.obj points.obj polygon.obj quads.obj rastpos.obj readpix.obj rect.obj scissor.obj shade.obj span.obj stencil.obj teximage.obj texobj.obj texstate.obj texture.obj triangle.obj varray.obj vb.obj vbfill.obj vbrender.obj vbxform.obj winpos.obj xform.obj mesa4.obj     -Femesa
+Microsoft (R) Incremental Linker Version 14.44.35222.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:mesa.exe 
+accum.obj 
+alpha.obj 
+alphabuf.obj 
+api1.obj 
+api2.obj 
+attrib.obj 
+bitmap.obj 
+blend.obj 
+clip.obj 
+colortab.obj 
+context.obj 
+copypix.obj 
+depth.obj 
+dlist.obj 
+drawpix.obj 
+enable.obj 
+eval.obj 
+feedback.obj 
+fog.obj 
+get.obj 
+hash.obj 
+image.obj 
+light.obj 
+lines.obj 
+logic.obj 
+masking.obj 
+matrix.obj 
+misc.obj 
+mmath.obj 
+osmesa.obj 
+pb.obj 
+pixel.obj 
+pointers.obj 
+points.obj 
+polygon.obj 
+quads.obj 
+rastpos.obj 
+readpix.obj 
+rect.obj 
+scissor.obj 
+shade.obj 
+span.obj 
+stencil.obj 
+teximage.obj 
+texobj.obj 
+texstate.obj 
+texture.obj 
+triangle.obj 
+varray.obj 
+vb.obj 
+vbfill.obj 
+vbrender.obj 
+vbxform.obj 
+winpos.obj 
+xform.obj 
+mesa4.obj 
+Generando c¢digo
+Generaci¢n de c¢digo finalizada
+Error from make 'specmake  build > make.out 2> make.err':
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Issuing options command 'specmake  options > options.out 2> options.err'
+Start options command: Mon Feb  9 20:01:57 2026 (1770663717)
+Stop options command: Mon Feb  9 20:01:57 2026 (1770663717)
+Elapsed time for options command: 00:00:00 (0)
+Output from options 'specmake  options > options.out 2> options.err':
+"COMP: cl -c -Fooptions.obj              /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"
+  Compile for '177.mesa' ended at:Mon Feb  9 20:01:57 2026 (1770663717)
+  Elapsed compile for '177.mesa': 00:00:03 (3)
+
+-----------------------------------
+  Building 178.galgel ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/178.galgel/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 2e-008
+action           = validate
+backup_config    = 1
+baseexe          = galgel
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 178.galgel
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = galgel_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = galgel
+nc               = 0
+num              = 178
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/178.galgel
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.01
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '178.galgel' started at:Mon Feb  9 20:01:58 2026 (1770663718)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Stop make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  galgel galgel.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\178.galgel\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\178.galgel\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Stop make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Fomodules.obj                modules.f90
+c -Foab.obj                ab.f90
+c -Foarhbt.obj                arhbt.f90
+c -Foarhim.obj                arhim.f90
+c -Fobifg21.obj                bifg21.f90
+c -Fobifgel.obj                bifgel.f90
+c -Fobifoag.obj                bifoag.f90
+c -Focyklap.obj                cyklap.f90
+c -FoeigQR.obj                eigQR.f90
+c -Fofarhim.obj                farhim.f90
+c -Fofunht.obj                funht.f90
+c -Fofunns.obj                funns.f90
+c -Fogalgel.obj                galgel.f90
+c -Fogrsyst.obj                grsyst.f90
+c -Fohtxyl.obj                htxyl.f90
+c -Fohtxynl.obj                htxynl.f90
+c -Fonewtap.obj                newtap.f90
+c -Fonewtlap.obj                newtlap.f90
+c -Fonsxyar.obj                nsxyar.f90
+c -Fonsxyl.obj                nsxyl.f90
+c -Fonsxynl.obj                nsxynl.f90
+c -Fopollin.obj                pollin.f90
+c -Fopolnel.obj                polnel.f90
+c -Fopro.obj                pro.f90
+c -FosyshtL.obj                syshtL.f90
+c -FosyshtN.obj                syshtN.f90
+c -FosysnsL.obj                sysnsL.f90
+c -FosysnsN.obj                sysnsN.f90
+c -Fotempbt.obj                tempbt.f90
+c -Fotempo.obj                tempo.f90
+c -Fotminit.obj                tminit.f90
+c -Fotnelgo.obj                tnelgo.f90
+c -Fotsubo.obj                tsubo.f90
+c -Fovxrigid.obj                vxrigid.f90
+c -Fovyfree.obj                vyfree.f90
+c -Foxconduc.obj                xconduc.f90
+c -Foyadiab.obj                yadiab.f90
+c -Folapak.obj                lapak.f90
+modules.obj ab.obj arhbt.obj arhim.obj bifg21.obj bifgel.obj bifoag.obj cyklap.obj eigQR.obj farhim.obj funht.obj funns.obj galgel.obj grsyst.obj htxyl.obj htxynl.obj newtap.obj newtlap.obj nsxyar.obj nsxyl.obj nsxynl.obj pollin.obj polnel.obj pro.obj syshtL.obj syshtN.obj sysnsL.obj sysnsN.obj tempbt.obj tempo.obj tminit.obj tnelgo.obj tsubo.obj vxrigid.obj vyfree.obj xconduc.obj yadiab.obj lapak.obj     -Fegalgel
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Fomodules.obj modules.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [modules.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foab.obj ab.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ab.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foarhbt.obj arhbt.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [arhbt.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foarhim.obj arhim.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [arhim.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobifg21.obj bifg21.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [bifg21.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobifgel.obj bifgel.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [bifgel.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobifoag.obj bifoag.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [bifoag.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focyklap.obj cyklap.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cyklap.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FoeigQR.obj eigQR.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [eigQR.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofarhim.obj farhim.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [farhim.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofunht.obj funht.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [funht.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofunns.obj funns.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [funns.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogalgel.obj galgel.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [galgel.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogrsyst.obj grsyst.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [grsyst.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtxyl.obj htxyl.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htxyl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtxynl.obj htxynl.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htxynl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonewtap.obj newtap.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [newtap.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonewtlap.obj newtlap.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [newtlap.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonsxyar.obj nsxyar.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nsxyar.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonsxyl.obj nsxyl.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nsxyl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonsxynl.obj nsxynl.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nsxynl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopollin.obj pollin.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [pollin.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopolnel.obj polnel.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [polnel.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopro.obj pro.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [pro.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FosyshtL.obj syshtL.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [syshtL.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FosyshtN.obj syshtN.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [syshtN.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FosysnsL.obj sysnsL.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sysnsL.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FosysnsN.obj sysnsN.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sysnsN.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotempbt.obj tempbt.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tempbt.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotempo.obj tempo.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tempo.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotminit.obj tminit.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tminit.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotnelgo.obj tnelgo.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tnelgo.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotsubo.obj tsubo.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tsubo.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fovxrigid.obj vxrigid.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [vxrigid.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fovyfree.obj vyfree.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [vyfree.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foxconduc.obj xconduc.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [xconduc.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foyadiab.obj yadiab.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [yadiab.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folapak.obj lapak.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lapak.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), modules.obj ab.obj arhbt.obj arhim.obj bifg21.obj bifgel.obj bifoag.obj cyklap.obj eigQR.obj farhim.obj funht.obj funns.obj galgel.obj grsyst.obj htxyl.obj htxynl.obj newtap.obj newtlap.obj nsxyar.obj nsxyl.obj nsxynl.obj pollin.obj polnel.obj pro.obj syshtL.obj syshtN.obj sysnsL.obj sysnsN.obj tempbt.obj tempo.obj tminit.obj tnelgo.obj tsubo.obj vxrigid.obj vyfree.obj xconduc.obj yadiab.obj lapak.obj -Fegalgel, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [galgel] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/178.galgel/run/00000001/make.err'
+  Error with make!
+  Compile for '178.galgel' ended at:Mon Feb  9 20:01:58 2026 (1770663718)
+  Elapsed compile for '178.galgel': 00:00:00 (0)
+*** Error building 178.galgel
+
+-----------------------------------
+  Building 179.art ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/179.art/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = C
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = art
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 179.art
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = art_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = art
+nc               = 0
+num              = 179
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/179.art
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.01
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '179.art' started at:Mon Feb  9 20:01:58 2026 (1770663718)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Stop make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  art art.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\179.art\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\179.art\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:58 2026 (1770663718)
+Stop make command: Mon Feb  9 20:01:59 2026 (1770663719)
+Elapsed time for make command: 00:00:01 (1)
+Output from make 'specmake  build > make.out 2> make.err':
+cl -c -Foscanner.obj              /Ox /GL /Op  scanner.c
+scanner.c
+scanner.c(287): warning C4477: 'fscanf' : la cadena de formato '%f' requiere un argumento de tipo 'float *', pero el argumento vari dico 2 tiene el tipo 'double *'
+scanner.c(287): note: considere el uso de ' %lf' en la cadena de formato
+scanner.c(287): warning C4477: 'fscanf' : la cadena de formato '%f' requiere un argumento de tipo 'float *', pero el argumento vari dico 4 tiene el tipo 'double *'
+scanner.c(287): note: considere el uso de ' %lf' en la cadena de formato
+scanner.c(299): warning C4477: 'fscanf' : la cadena de formato '%f' requiere un argumento de tipo 'float *', pero el argumento vari dico 1 tiene el tipo 'double *'
+scanner.c(299): note: considere el uso de ' %lf' en la cadena de formato
+cl       /Ox /GL /Op  scanner.obj     -Feart
+Microsoft (R) Incremental Linker Version 14.44.35222.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:art.exe 
+scanner.obj 
+Generando c¢digo
+Generaci¢n de c¢digo finalizada
+Error from make 'specmake  build > make.out 2> make.err':
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Issuing options command 'specmake  options > options.out 2> options.err'
+Start options command: Mon Feb  9 20:01:59 2026 (1770663719)
+Stop options command: Mon Feb  9 20:01:59 2026 (1770663719)
+Elapsed time for options command: 00:00:00 (0)
+Output from options 'specmake  options > options.out 2> options.err':
+"COMP: cl -c -Fooptions.obj              /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"
+  Compile for '179.art' ended at:Mon Feb  9 20:01:59 2026 (1770663719)
+  Elapsed compile for '179.art': 00:00:01 (1)
+
+-----------------------------------
+  Building 183.equake ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = C
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = equake
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 183.equake
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = equake_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = equake
+nc               = 0
+num              = 183
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/183.equake
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 1e-005
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '183.equake' started at:Mon Feb  9 20:01:59 2026 (1770663719)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:59 2026 (1770663719)
+Stop make command: Mon Feb  9 20:01:59 2026 (1770663719)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  equake equake.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\183.equake\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\183.equake\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:01:59 2026 (1770663719)
+Stop make command: Mon Feb  9 20:01:59 2026 (1770663719)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+cl -c -Foquake.obj              /Ox /GL /Op  quake.c
+quake.c
+cl       /Ox /GL /Op  quake.obj     -Feequake
+Microsoft (R) Incremental Linker Version 14.44.35222.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:equake.exe 
+quake.obj 
+Generando c¢digo
+Generaci¢n de c¢digo finalizada
+Error from make 'specmake  build > make.out 2> make.err':
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Issuing options command 'specmake  options > options.out 2> options.err'
+Start options command: Mon Feb  9 20:01:59 2026 (1770663719)
+Stop options command: Mon Feb  9 20:01:59 2026 (1770663719)
+Elapsed time for options command: 00:00:00 (0)
+Output from options 'specmake  options > options.out 2> options.err':
+"COMP: cl -c -Fooptions.obj              /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"
+  Compile for '183.equake' ended at:Mon Feb  9 20:01:59 2026 (1770663719)
+  Elapsed compile for '183.equake': 00:00:00 (0)
+
+-----------------------------------
+  Building 187.facerec ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/187.facerec/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+action           = validate
+backup_config    = 1
+baseexe          = facerec
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 187.facerec
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = facerec_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = facerec
+nc               = 0
+num              = 187
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/187.facerec
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '187.facerec' started at:Mon Feb  9 20:02:00 2026 (1770663720)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Stop make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  facerec facerec.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\187.facerec\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\187.facerec\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Stop make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -FoFaceRecTypes.obj                FaceRecTypes.f90
+c -FoparameterRoutines.obj                parameterRoutines.f90
+c -Focfftb.obj                cfftb.f90
+c -Focfftf.obj                cfftf.f90
+c -Focffti.obj                cffti.f90
+c -Fofft2d.obj                fft2d.f90
+c -FogaborRoutines.obj                gaborRoutines.f90
+c -FoimageRoutines.obj                imageRoutines.f90
+c -FographRoutines.obj                graphRoutines.f90
+c -FoFaceRec.obj                FaceRec.f90
+FaceRecTypes.obj parameterRoutines.obj cfftb.obj cfftf.obj cffti.obj fft2d.obj gaborRoutines.obj imageRoutines.obj graphRoutines.obj FaceRec.obj     -Fefacerec
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -FoFaceRecTypes.obj FaceRecTypes.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [FaceRecTypes.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FoparameterRoutines.obj parameterRoutines.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [parameterRoutines.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focfftb.obj cfftb.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cfftb.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focfftf.obj cfftf.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cfftf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focffti.obj cffti.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cffti.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofft2d.obj fft2d.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fft2d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FogaborRoutines.obj gaborRoutines.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gaborRoutines.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FoimageRoutines.obj imageRoutines.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [imageRoutines.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FographRoutines.obj graphRoutines.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [graphRoutines.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -FoFaceRec.obj FaceRec.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [FaceRec.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), FaceRecTypes.obj parameterRoutines.obj cfftb.obj cfftf.obj cffti.obj fft2d.obj gaborRoutines.obj imageRoutines.obj graphRoutines.obj FaceRec.obj -Fefacerec, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [facerec] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/187.facerec/run/00000001/make.err'
+  Error with make!
+  Compile for '187.facerec' ended at:Mon Feb  9 20:02:00 2026 (1770663720)
+  Elapsed compile for '187.facerec': 00:00:00 (0)
+*** Error building 187.facerec
+
+-----------------------------------
+  Building 188.ammp ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = C
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 0.0001
+action           = validate
+backup_config    = 1
+baseexe          = ammp
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 188.ammp
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = ammp_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = ammp
+nc               = 0
+num              = 188
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/188.ammp
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.003
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '188.ammp' started at:Mon Feb  9 20:02:00 2026 (1770663720)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Stop make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  ammp ammp.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\188.ammp\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\188.ammp\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:00 2026 (1770663720)
+Stop make command: Mon Feb  9 20:02:02 2026 (1770663722)
+Elapsed time for make command: 00:00:02 (2)
+Output from make 'specmake  build > make.out 2> make.err':
+cl -c -Foammp.obj       -DSPEC_CPU2000       /Ox /GL /Op  ammp.c
+ammp.c
+cl -c -Fobox.obj       -DSPEC_CPU2000       /Ox /GL /Op  box.c
+box.c
+cl -c -Foeval.obj       -DSPEC_CPU2000       /Ox /GL /Op  eval.c
+eval.c
+cl -c -Foanalyze.obj       -DSPEC_CPU2000       /Ox /GL /Op  analyze.c
+analyze.c
+cl -c -Foanonbon.obj       -DSPEC_CPU2000       /Ox /GL /Op  anonbon.c
+anonbon.c
+cl -c -Fonoel.obj       -DSPEC_CPU2000       /Ox /GL /Op  noel.c
+noel.c
+cl -c -Foanimate.obj       -DSPEC_CPU2000       /Ox /GL /Op  animate.c
+animate.c
+cl -c -Foatoms.obj       -DSPEC_CPU2000       /Ox /GL /Op  atoms.c
+atoms.c
+cl -c -Fobonds.obj       -DSPEC_CPU2000       /Ox /GL /Op  bonds.c
+bonds.c
+cl -c -Foangle.obj       -DSPEC_CPU2000       /Ox /GL /Op  angle.c
+angle.c
+cl -c -Fogsdg.obj       -DSPEC_CPU2000       /Ox /GL /Op  gsdg.c
+gsdg.c
+cl -c -Fohybrid.obj       -DSPEC_CPU2000       /Ox /GL /Op  hybrid.c
+hybrid.c
+cl -c -Founonbon.obj       -DSPEC_CPU2000       /Ox /GL /Op  unonbon.c
+unonbon.c
+cl -c -Forectmm.obj       -DSPEC_CPU2000       /Ox /GL /Op  rectmm.c
+rectmm.c
+cl -c -Fovnonbon.obj       -DSPEC_CPU2000       /Ox /GL /Op  vnonbon.c
+vnonbon.c
+cl -c -Fotgroup.obj       -DSPEC_CPU2000       /Ox /GL /Op  tgroup.c
+tgroup.c
+cl -c -Fotset.obj       -DSPEC_CPU2000       /Ox /GL /Op  tset.c
+tset.c
+cl -c -Fotailor.obj       -DSPEC_CPU2000       /Ox /GL /Op  tailor.c
+tailor.c
+cl -c -Fotorsion.obj       -DSPEC_CPU2000       /Ox /GL /Op  torsion.c
+torsion.c
+cl -c -Fooptimist.obj       -DSPEC_CPU2000       /Ox /GL /Op  optimist.c
+optimist.c
+cl -c -Fovariable.obj       -DSPEC_CPU2000       /Ox /GL /Op  variable.c
+variable.c
+cl -c -Fomath.obj       -DSPEC_CPU2000       /Ox /GL /Op  math.c
+math.c
+cl -c -Fomom.obj       -DSPEC_CPU2000       /Ox /GL /Op  mom.c
+mom.c
+cl -c -Fomonitor.obj       -DSPEC_CPU2000       /Ox /GL /Op  monitor.c
+monitor.c
+cl -c -Fosignificance.obj       -DSPEC_CPU2000       /Ox /GL /Op  significance.c
+significance.c
+cl -c -Forandom.obj       -DSPEC_CPU2000       /Ox /GL /Op  random.c
+random.c
+cl -c -Fotether.obj       -DSPEC_CPU2000       /Ox /GL /Op  tether.c
+tether.c
+cl -c -Forestrain.obj       -DSPEC_CPU2000       /Ox /GL /Op  restrain.c
+restrain.c
+cl       /Ox /GL /Op  ammp.obj box.obj eval.obj analyze.obj anonbon.obj noel.obj animate.obj atoms.obj bonds.obj angle.obj gsdg.obj hybrid.obj unonbon.obj rectmm.obj vnonbon.obj tgroup.obj tset.obj tailor.obj torsion.obj optimist.obj variable.obj math.obj mom.obj monitor.obj significance.obj random.obj tether.obj restrain.obj     -Feammp
+Microsoft (R) Incremental Linker Version 14.44.35222.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/ltcg 
+/out:ammp.exe 
+ammp.obj 
+box.obj 
+eval.obj 
+analyze.obj 
+anonbon.obj 
+noel.obj 
+animate.obj 
+atoms.obj 
+bonds.obj 
+angle.obj 
+gsdg.obj 
+hybrid.obj 
+unonbon.obj 
+rectmm.obj 
+vnonbon.obj 
+tgroup.obj 
+tset.obj 
+tailor.obj 
+torsion.obj 
+optimist.obj 
+variable.obj 
+math.obj 
+mom.obj 
+monitor.obj 
+significance.obj 
+random.obj 
+tether.obj 
+restrain.obj 
+Generando c¢digo
+C:\speccpu2000\benchspec\CFP2000\188.ammp\run\00000001\tgroup.c(265) : warning C4715: 'tsearch': no todas las rutas de acceso de control devuelven un valor
+Generaci¢n de c¢digo finalizada
+Error from make 'specmake  build > make.out 2> make.err':
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.44.35222 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : L¡nea de comandos warning D9002 : se omite la opci¢n desconocida '/Op'
+Issuing options command 'specmake  options > options.out 2> options.err'
+Start options command: Mon Feb  9 20:02:02 2026 (1770663722)
+Stop options command: Mon Feb  9 20:02:02 2026 (1770663722)
+Elapsed time for options command: 00:00:00 (0)
+Output from options 'specmake  options > options.out 2> options.err':
+"COMP: cl -c -Fooptions.obj       -DSPEC_CPU2000       /Ox /GL /Op "
+"LINK: cl       /Ox /GL /Op       -Feoptions"
+  Compile for '188.ammp' ended at:Mon Feb  9 20:02:02 2026 (1770663722)
+  Elapsed compile for '188.ammp': 00:00:02 (2)
+
+-----------------------------------
+  Building 189.lucas ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/189.lucas/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 
+action           = validate
+backup_config    = 1
+baseexe          = lucas
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 189.lucas
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = lucas_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = lucas
+nc               = 0
+num              = 189
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/189.lucas
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '189.lucas' started at:Mon Feb  9 20:02:02 2026 (1770663722)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:02 2026 (1770663722)
+Stop make command: Mon Feb  9 20:02:02 2026 (1770663722)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  lucas lucas.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\189.lucas\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\189.lucas\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:02 2026 (1770663722)
+Stop make command: Mon Feb  9 20:02:02 2026 (1770663722)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Folucas_distrib_spec.obj                lucas_distrib_spec.f90
+lucas_distrib_spec.obj     -Felucas
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Folucas_distrib_spec.obj lucas_distrib_spec.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lucas_distrib_spec.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), lucas_distrib_spec.obj -Felucas, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [lucas] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/189.lucas/run/00000001/make.err'
+  Error with make!
+  Compile for '189.lucas' ended at:Mon Feb  9 20:02:02 2026 (1770663722)
+  Elapsed compile for '189.lucas': 00:00:00 (0)
+*** Error building 189.lucas
+
+-----------------------------------
+  Building 191.fma3d ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/191.fma3d/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 1e-007
+action           = validate
+backup_config    = 1
+baseexe          = fma3d
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 191.fma3d
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = fma3d_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = fma3d
+nc               = 0
+num              = 191
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/191.fma3d
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.04
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '191.fma3d' started at:Mon Feb  9 20:02:03 2026 (1770663723)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:03 2026 (1770663723)
+Stop make command: Mon Feb  9 20:02:03 2026 (1770663723)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  fma3d fma3d.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\191.fma3d\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\191.fma3d\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:03 2026 (1770663723)
+Stop make command: Mon Feb  9 20:02:04 2026 (1770663724)
+Elapsed time for make command: 00:00:01 (1)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Fofma3d.obj                fma3d.f90
+c -Fobeam_.obj                beam_.f90
+c -Foinclude_file_.obj                include_file_.f90
+c -Fopenta_.obj                penta_.f90
+c -Fosegment_set_.obj                segment_set_.f90
+c -Fobody_force_.obj                body_force_.f90
+c -Foindx_.obj                indx_.f90
+c -Foperiodic_bc_.obj                periodic_bc_.f90
+c -Fosliding_interface_.obj                sliding_interface_.f90
+c -Foconstrained_node_.obj                constrained_node_.f90
+c -Folayering_.obj                layering_.f90
+c -Foplate_pair_.obj                plate_pair_.f90
+c -Fosliding_node_.obj                sliding_node_.f90
+c -Focontact_node_.obj                contact_node_.f90
+c -Folocation_.obj                location_.f90
+c -Foplatq_.obj                platq_.f90
+c -Fospot_weld_.obj                spot_weld_.f90
+c -Focontact_surface_.obj                contact_surface_.f90
+c -Folsold_.obj                lsold_.f90
+c -Foplatt_.obj                platt_.f90
+c -Fospring_.obj                spring_.f90
+c -Focoord_.obj                coord_.f90
+c -Fomassprop_.obj                massprop_.f90
+c -Fopressure_bc_.obj                pressure_bc_.f90
+c -Fospring_bc_.obj                spring_bc_.f90
+c -Fodamper_.obj                damper_.f90
+c -Fomaterial_.obj                material_.f90
+c -Foproperty_.obj                property_.f90
+c -Fostate_variables_.obj                state_variables_.f90
+c -Fodamper_bc_.obj                damper_bc_.f90
+c -Fomean_stress_.obj                mean_stress_.f90
+c -Foshared_common_data.obj                shared_common_data.f90
+c -Fostress_.obj                stress_.f90
+c -Fodisplacement_bc_.obj                displacement_bc_.f90
+c -Fomembq_.obj                membq_.f90
+c -Foqa_record_.obj                qa_record_.f90
+c -Fotabulated_function_.obj                tabulated_function_.f90
+c -Foelement_set_.obj                element_set_.f90
+c -Fomembt_.obj                membt_.f90
+c -Forelink_scratch_.obj                relink_scratch_.f90
+c -Fotetra_.obj                tetra_.f90
+c -Foenumerated_sets_.obj                enumerated_sets_.f90
+c -Fomotion_.obj                motion_.f90
+c -Foresults_.obj                results_.f90
+c -Fotied_bc_.obj                tied_bc_.f90
+c -Foforce_.obj                force_.f90
+c -Fonodal_point_mass_.obj                nodal_point_mass_.f90
+c -Forigid_body_.obj                rigid_body_.f90
+c -Fotruss_.obj                truss_.f90
+c -Foforce_bc_.obj                force_bc_.f90
+c -Fonode_.obj                node_.f90
+c -Forigid_body_mass_.obj                rigid_body_mass_.f90
+c -Fovalue_.obj                value_.f90
+c -Fogauge1d_.obj                gauge1d_.f90
+c -Fonode_set_.obj                node_set_.f90
+c -Forigid_wall_bc_.obj                rigid_wall_bc_.f90
+c -Fovelocity_ic_.obj                velocity_ic_.f90
+c -Fogauge2d_.obj                gauge2d_.f90
+c -Fononreflecting_bc_.obj                nonreflecting_bc_.f90
+c -Fosection_1d_.obj                section_1d_.f90
+c -Fogauge3d_.obj                gauge3d_.f90
+c -Fonrbc_data_.obj                nrbc_data_.f90
+c -Fosection_2d_.obj                section_2d_.f90
+c -Fohexah_.obj                hexah_.f90
+c -Fooutput_.obj                output_.f90
+c -Fosegment_.obj                segment_.f90
+c -Folsold.obj                lsold.f90
+c -Fodamper.obj                damper.f90
+c -Fospring.obj                spring.f90
+c -Fomaterial_00.obj                material_00.f90
+c -Fomaterial_10.obj                material_10.f90
+c -Fomaterial_11.obj                material_11.f90
+c -Fomaterial_17.obj                material_17.f90
+c -Fomaterial_22.obj                material_22.f90
+c -Fomaterial_25.obj                material_25.f90
+c -Fomaterial_32.obj                material_32.f90
+c -Fomaterial_33.obj                material_33.f90
+c -Fomaterial_34a.obj                material_34a.f90
+c -Fomaterial_36.obj                material_36.f90
+c -Fomaterial_38.obj                material_38.f90
+c -Fomaterial_dm.obj                material_dm.f90
+c -Fomaterial_sp.obj                material_sp.f90
+c -Fosort.obj                sort.f90
+c -Fopdb.obj                pdb.f90
+c -Fobeam.obj                beam.f90
+c -Fomembq.obj                membq.f90
+c -Fomembt.obj                membt.f90
+c -Fopenta.obj                penta.f90
+c -Fotetra.obj                tetra.f90
+c -Fohexah.obj                hexah.f90
+c -Foplatq.obj                platq.f90
+c -Fotruss.obj                truss.f90
+c -Foplatt.obj                platt.f90
+c -Fofma1.obj                fma1.f90
+c -Fogetirv.obj                getirv.f90
+c -Forelink.obj                relink.f90
+c -Fooutput.obj                output.f90
+c -Fofma2.obj                fma2.f90
+c -Fopartition.obj                partition.f90
+c -Fostrain.obj                strain.f90
+c -Foslide.obj                slide.f90
+fma3d.obj beam_.obj include_file_.obj penta_.obj segment_set_.obj body_force_.obj indx_.obj periodic_bc_.obj sliding_interface_.obj constrained_node_.obj layering_.obj plate_pair_.obj sliding_node_.obj contact_node_.obj location_.obj platq_.obj spot_weld_.obj contact_surface_.obj lsold_.obj platt_.obj spring_.obj coord_.obj massprop_.obj pressure_bc_.obj spring_bc_.obj damper_.obj material_.obj property_.obj state_variables_.obj damper_bc_.obj mean_stress_.obj shared_common_data.obj stress_.obj displacement_bc_.obj membq_.obj qa_record_.obj tabulated_function_.obj element_set_.obj membt_.obj relink_scratch_.obj tetra_.obj enumerated_sets_.obj motion_.obj results_.obj tied_bc_.obj force_.obj nodal_point_mass_.obj rigid_body_.obj truss_.obj force_bc_.obj node_.obj rigid_body_mass_.obj value_.obj gauge1d_.obj node_set_.obj rigid_wall_bc_.obj velocity_ic_.obj gauge2d_.obj nonreflecting_bc_.obj section_1d_.obj gauge3d_.obj nrbc_data_.obj section_2d_.obj hexah_.obj output_.obj segment_.obj lsold.obj damper.obj spring.obj material_00.obj material_10.obj material_11.obj material_17.obj material_22.obj material_25.obj material_32.obj material_33.obj material_34a.obj material_36.obj material_38.obj material_dm.obj material_sp.obj sort.obj pdb.obj beam.obj membq.obj membt.obj penta.obj tetra.obj hexah.obj platq.obj truss.obj platt.obj fma1.obj getirv.obj relink.obj output.obj fma2.obj partition.obj strain.obj slide.obj     -Fefma3d
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Fofma3d.obj fma3d.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fma3d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobeam_.obj beam_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [beam_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foinclude_file_.obj include_file_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [include_file_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopenta_.obj penta_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [penta_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosegment_set_.obj segment_set_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [segment_set_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobody_force_.obj body_force_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [body_force_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foindx_.obj indx_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [indx_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foperiodic_bc_.obj periodic_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [periodic_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosliding_interface_.obj sliding_interface_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sliding_interface_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foconstrained_node_.obj constrained_node_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [constrained_node_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folayering_.obj layering_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [layering_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foplate_pair_.obj plate_pair_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [plate_pair_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosliding_node_.obj sliding_node_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sliding_node_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focontact_node_.obj contact_node_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [contact_node_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folocation_.obj location_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [location_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foplatq_.obj platq_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [platq_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fospot_weld_.obj spot_weld_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [spot_weld_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focontact_surface_.obj contact_surface_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [contact_surface_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folsold_.obj lsold_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lsold_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foplatt_.obj platt_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [platt_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fospring_.obj spring_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [spring_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focoord_.obj coord_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [coord_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomassprop_.obj massprop_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [massprop_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopressure_bc_.obj pressure_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [pressure_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fospring_bc_.obj spring_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [spring_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodamper_.obj damper_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [damper_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_.obj material_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foproperty_.obj property_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [property_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fostate_variables_.obj state_variables_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [state_variables_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodamper_bc_.obj damper_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [damper_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomean_stress_.obj mean_stress_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [mean_stress_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foshared_common_data.obj shared_common_data.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [shared_common_data.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fostress_.obj stress_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [stress_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodisplacement_bc_.obj displacement_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [displacement_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomembq_.obj membq_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [membq_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foqa_record_.obj qa_record_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [qa_record_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotabulated_function_.obj tabulated_function_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tabulated_function_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foelement_set_.obj element_set_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [element_set_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomembt_.obj membt_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [membt_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forelink_scratch_.obj relink_scratch_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [relink_scratch_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotetra_.obj tetra_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tetra_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenumerated_sets_.obj enumerated_sets_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [enumerated_sets_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomotion_.obj motion_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [motion_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foresults_.obj results_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [results_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotied_bc_.obj tied_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tied_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foforce_.obj force_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [force_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonodal_point_mass_.obj nodal_point_mass_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nodal_point_mass_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forigid_body_.obj rigid_body_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rigid_body_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotruss_.obj truss_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [truss_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foforce_bc_.obj force_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [force_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonode_.obj node_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [node_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forigid_body_mass_.obj rigid_body_mass_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rigid_body_mass_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fovalue_.obj value_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [value_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogauge1d_.obj gauge1d_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gauge1d_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonode_set_.obj node_set_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [node_set_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forigid_wall_bc_.obj rigid_wall_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rigid_wall_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fovelocity_ic_.obj velocity_ic_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [velocity_ic_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogauge2d_.obj gauge2d_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gauge2d_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fononreflecting_bc_.obj nonreflecting_bc_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nonreflecting_bc_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosection_1d_.obj section_1d_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [section_1d_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogauge3d_.obj gauge3d_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gauge3d_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fonrbc_data_.obj nrbc_data_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [nrbc_data_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosection_2d_.obj section_2d_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [section_2d_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohexah_.obj hexah_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [hexah_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fooutput_.obj output_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [output_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosegment_.obj segment_.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [segment_.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folsold.obj lsold.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lsold.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodamper.obj damper.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [damper.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fospring.obj spring.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [spring.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_00.obj material_00.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_00.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_10.obj material_10.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_10.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_11.obj material_11.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_11.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_17.obj material_17.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_17.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_22.obj material_22.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_22.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_25.obj material_25.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_25.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_32.obj material_32.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_32.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_33.obj material_33.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_33.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_34a.obj material_34a.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_34a.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_36.obj material_36.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_36.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_38.obj material_38.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_38.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_dm.obj material_dm.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_dm.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaterial_sp.obj material_sp.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [material_sp.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosort.obj sort.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sort.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopdb.obj pdb.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [pdb.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobeam.obj beam.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [beam.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomembq.obj membq.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [membq.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomembt.obj membt.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [membt.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopenta.obj penta.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [penta.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotetra.obj tetra.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tetra.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohexah.obj hexah.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [hexah.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foplatq.obj platq.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [platq.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotruss.obj truss.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [truss.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foplatt.obj platt.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [platt.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofma1.obj fma1.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fma1.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogetirv.obj getirv.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [getirv.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forelink.obj relink.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [relink.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fooutput.obj output.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [output.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofma2.obj fma2.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fma2.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopartition.obj partition.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [partition.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fostrain.obj strain.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [strain.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foslide.obj slide.f90, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [slide.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), fma3d.obj beam_.obj include_file_.obj penta_.obj segment_set_.obj body_force_.obj indx_.obj periodic_bc_.obj sliding_interface_.obj constrained_node_.obj layering_.obj plate_pair_.obj sliding_node_.obj contact_node_.obj location_.obj platq_.obj spot_weld_.obj contact_surface_.obj lsold_.obj platt_.obj spring_.obj coord_.obj massprop_.obj pressure_bc_.obj spring_bc_.obj damper_.obj material_.obj property_.obj state_variables_.obj damper_bc_.obj mean_stress_.obj shared_common_data.obj stress_.obj displacement_bc_.obj membq_.obj qa_record_.obj tabulated_function_.obj element_set_.obj membt_.obj relink_scratch_.obj tetra_.obj enumerated_sets_.obj motion_.obj results_.obj tied_bc_.obj force_.obj nodal_point_mass_.obj rigid_body_.obj truss_.obj force_bc_.obj node_.obj rigid_body_mass_.obj value_.obj gauge1d_.obj node_set_.obj rigid_wall_bc_.obj velocity_ic_.obj gauge2d_.obj nonreflecting_bc_.obj section_1d_.obj gauge3d_.obj nrbc_data_.obj section_2d_.obj hexah_.obj output_.obj segment_.obj lsold.obj damper.obj spring.obj material_00.obj material_10.obj material_11.obj material_17.obj material_22.obj material_25.obj material_32.obj material_33.obj material_34a.obj material_36.obj material_38.obj material_dm.obj material_sp.obj sort.obj pdb.obj beam.obj membq.obj membt.obj penta.obj tetra.obj hexah.obj platq.obj truss.obj platt.obj fma1.obj getirv.obj relink.obj output.obj fma2.obj partition.obj strain.obj slide.obj -Fefma3d, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [fma3d] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/191.fma3d/run/00000001/make.err'
+  Error with make!
+  Compile for '191.fma3d' ended at:Mon Feb  9 20:02:04 2026 (1770663724)
+  Elapsed compile for '191.fma3d': 00:00:01 (1)
+*** Error building 191.fma3d
+
+-----------------------------------
+  Building 200.sixtrack ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/200.sixtrack/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 0.0005
+action           = validate
+backup_config    = 1
+baseexe          = sixtrack
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 200.sixtrack
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = sixtrack_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = sixtrack
+nc               = 0
+num              = 200
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/200.sixtrack
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.0005
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '200.sixtrack' started at:Mon Feb  9 20:02:05 2026 (1770663725)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Stop make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  sixtrack sixtrack.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\200.sixtrack\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\200.sixtrack\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Stop make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Foabend.obj                abend.f
+c -Foadia.obj                adia.f
+c -Foadib.obj                adib.f
+c -Foambm6.obj                ambm6.f
+c -Foanalie6.obj                analie6.f
+c -Fobetalf.obj                betalf.f
+c -Foblock.obj                block.f
+c -Foblockdis.obj                blockdis.f
+c -Focaconv.obj                caconv.f
+c -Focalrms.obj                calrms.f
+c -Fochroma.obj                chroma.f
+c -Focinvar.obj                cinvar.f
+c -Foclor6.obj                clor6.f
+c -Foclorb.obj                clorb.f
+c -Foclorb2.obj                clorb2.f
+c -Focombel.obj                combel.f
+c -Focomnul.obj                comnul.f
+c -Focorrorb.obj                corrorb.f
+c -Focpart6.obj                cpart6.f
+c -Focphase.obj                cphase.f
+c -Focpltwis.obj                cpltwis.f
+c -Focreat6.obj                creat6.f
+c -Foctrbasi6.obj                ctrbasi6.f
+c -Fodacond6.obj                dacond6.f
+c -Fodacopd6.obj                dacopd6.f
+c -Fodalie6s.obj                dalie6s.f
+c -Fodalind6.obj                dalind6.f
+c -Fodaprid6.obj                daprid6.f
+c -Fodaten.obj                daten.f
+c -Fodecoup.obj                decoup.f
+c -Fodetune.obj                detune.f
+c -Fodinv.obj                dinv.f
+c -Fodist1.obj                dist1.f
+c -Fodistance.obj                distance.f
+c -Fodlie6.obj                dlie6.f
+c -Foeig66.obj                eig66.f
+c -Foenvada.obj                envada.f
+c -Foenvar.obj                envar.f
+c -Foenvardis.obj                envardis.f
+c -Foenvars.obj                envars.f
+c -Foenvarsv.obj                envarsv.f
+c -Foenvquad.obj                envquad.f
+c -Foerrf.obj                errf.f
+c -Foerrff.obj                errff.f
+c -Foerror.obj                error.f
+c -Fofexpo6.obj                fexpo6.f
+c -Fofft.obj                fft.f
+c -Fofit.obj                fit.f
+c -Foflush.obj                flush.f
+c -Foforest6.obj                forest6.f
+c -Fofoxys.obj                foxys.f
+c -Fogam6.obj                gam6.f
+c -Fogbm6.obj                gbm6.f
+c -Fogofix6.obj                gofix6.f
+c -Fohbook.obj                hbook.f
+c -Fohtal.obj                htal.f
+c -Fohtbl.obj                htbl.f
+c -Fohtls.obj                htls.f
+c -Fohtrl.obj                htrl.f
+c -Fohtul.obj                htul.f
+c -Fohyper6.obj                hyper6.f
+c -Foigmeta.obj                igmeta.f
+c -Fointd6.obj                intd6.f
+c -Fointepr.obj                intepr.f
+c -Fojoin.obj                join.f
+c -Folie6.obj                lie6.f
+c -Folinopt.obj                linopt.f
+c -Foloesd.obj                loesd.f
+c -Folostpar2.obj                lostpar2.f
+c -Folostpar3.obj                lostpar3.f
+c -Folostpart.obj                lostpart.f
+c -Fomaincr.obj                maincr.f
+c -Fomainia6.obj                mainia6.f
+c -Fomatrix.obj                matrix.f
+c -Fomaxmin.obj                maxmin.f
+c -Fomidbloc6.obj                midbloc6.f
+c -Fomul66.obj                mul66.f
+c -Fomywwerf.obj                mywwerf.f
+c -Foorbinit.obj                orbinit.f
+c -Foord.obj                ord.f
+c -Foorderma6.obj                orderma6.f
+c -Fophasad.obj                phasad.f
+c -Fopostpr.obj                postpr.f
+c -Foputorb.obj                putorb.f
+c -Foqmod.obj                qmod.f
+c -Foranecu.obj                ranecu.f
+c -Foresb6.obj                resb6.f
+c -Foresex.obj                resex.f
+c -Foresl6.obj                resl6.f
+c -Forext6.obj                rext6.f
+c -Foripple.obj                ripple.f
+c -Formod.obj                rmod.f
+c -Forotatio6.obj                rotatio6.f
+c -Fosearch.obj                search.f
+c -Fosinpro.obj                sinpro.f
+c -Fosixdaco6.obj                sixdaco6.f
+c -Fosubre.obj                subre.f
+c -Fosubsea.obj                subsea.f
+c -Fosumpos.obj                sumpos.f
+c -Fosynoda.obj                synoda.f
+c -Fosynuthck.obj                synuthck.f
+c -Fotake6.obj                take6.f
+c -Fotaked6.obj                taked6.f
+c -Fothck4d.obj                thck4d.f
+c -Fothck6d.obj                thck6d.f
+c -Fothck6dua.obj                thck6dua.f
+c -Fothin4d.obj                thin4d.f
+c -Fothin6d.obj                thin6d.f
+c -Fothin6dua.obj                thin6dua.f
+c -Fotrauthck.obj                trauthck.f
+c -Fotrauthin.obj                trauthin.f
+c -Fotrx6.obj                trx6.f
+c -Fotuer6.obj                tuer6.f
+c -Foumlau6.obj                umlau6.f
+c -Foumlauf.obj                umlauf.f
+c -Fowrite4.obj                write4.f
+c -Fowrite6.obj                write6.f
+c -Fowritebin.obj                writebin.f
+c -Fowritelin.obj                writelin.f
+c -Fowzset.obj                wzset.f
+c -Fowzsubf.obj                wzsubf.f
+c -Fowzsubv.obj                wzsubv.f
+c -Foxuflow.obj                xuflow.f
+abend.obj adia.obj adib.obj ambm6.obj analie6.obj betalf.obj block.obj blockdis.obj caconv.obj calrms.obj chroma.obj cinvar.obj clor6.obj clorb.obj clorb2.obj combel.obj comnul.obj corrorb.obj cpart6.obj cphase.obj cpltwis.obj creat6.obj ctrbasi6.obj dacond6.obj dacopd6.obj dalie6s.obj dalind6.obj daprid6.obj daten.obj decoup.obj detune.obj dinv.obj dist1.obj distance.obj dlie6.obj eig66.obj envada.obj envar.obj envardis.obj envars.obj envarsv.obj envquad.obj errf.obj errff.obj error.obj fexpo6.obj fft.obj fit.obj flush.obj forest6.obj foxys.obj gam6.obj gbm6.obj gofix6.obj hbook.obj htal.obj htbl.obj htls.obj htrl.obj htul.obj hyper6.obj igmeta.obj intd6.obj intepr.obj join.obj lie6.obj linopt.obj loesd.obj lostpar2.obj lostpar3.obj lostpart.obj maincr.obj mainia6.obj matrix.obj maxmin.obj midbloc6.obj mul66.obj mywwerf.obj orbinit.obj ord.obj orderma6.obj phasad.obj postpr.obj putorb.obj qmod.obj ranecu.obj resb6.obj resex.obj resl6.obj rext6.obj ripple.obj rmod.obj rotatio6.obj search.obj sinpro.obj sixdaco6.obj subre.obj subsea.obj sumpos.obj synoda.obj synuthck.obj take6.obj taked6.obj thck4d.obj thck6d.obj thck6dua.obj thin4d.obj thin6d.obj thin6dua.obj trauthck.obj trauthin.obj trx6.obj tuer6.obj umlau6.obj umlauf.obj write4.obj write6.obj writebin.obj writelin.obj wzset.obj wzsubf.obj wzsubv.obj xuflow.obj     -Fesixtrack
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Foabend.obj abend.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [abend.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foadia.obj adia.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [adia.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foadib.obj adib.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [adib.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foambm6.obj ambm6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ambm6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foanalie6.obj analie6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [analie6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fobetalf.obj betalf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [betalf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foblock.obj block.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [block.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foblockdis.obj blockdis.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [blockdis.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focaconv.obj caconv.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [caconv.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focalrms.obj calrms.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [calrms.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fochroma.obj chroma.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [chroma.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focinvar.obj cinvar.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cinvar.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foclor6.obj clor6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [clor6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foclorb.obj clorb.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [clorb.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foclorb2.obj clorb2.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [clorb2.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focombel.obj combel.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [combel.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focomnul.obj comnul.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [comnul.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focorrorb.obj corrorb.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [corrorb.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focpart6.obj cpart6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cpart6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focphase.obj cphase.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cphase.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focpltwis.obj cpltwis.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [cpltwis.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Focreat6.obj creat6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [creat6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foctrbasi6.obj ctrbasi6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ctrbasi6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodacond6.obj dacond6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dacond6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodacopd6.obj dacopd6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dacopd6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodalie6s.obj dalie6s.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dalie6s.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodalind6.obj dalind6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dalind6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodaprid6.obj daprid6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [daprid6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodaten.obj daten.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [daten.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodecoup.obj decoup.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [decoup.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodetune.obj detune.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [detune.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodinv.obj dinv.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dinv.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodist1.obj dist1.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dist1.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodistance.obj distance.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [distance.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fodlie6.obj dlie6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [dlie6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foeig66.obj eig66.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [eig66.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvada.obj envada.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envada.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvar.obj envar.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envar.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvardis.obj envardis.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envardis.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvars.obj envars.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envars.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvarsv.obj envarsv.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envarsv.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foenvquad.obj envquad.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [envquad.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foerrf.obj errf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [errf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foerrff.obj errff.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [errff.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foerror.obj error.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [error.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofexpo6.obj fexpo6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fexpo6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofft.obj fft.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fft.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofit.obj fit.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [fit.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foflush.obj flush.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [flush.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foforest6.obj forest6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [forest6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fofoxys.obj foxys.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [foxys.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogam6.obj gam6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gam6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogbm6.obj gbm6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gbm6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fogofix6.obj gofix6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [gofix6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohbook.obj hbook.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [hbook.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtal.obj htal.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htal.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtbl.obj htbl.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htbl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtls.obj htls.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htls.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtrl.obj htrl.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htrl.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohtul.obj htul.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [htul.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fohyper6.obj hyper6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [hyper6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foigmeta.obj igmeta.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [igmeta.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fointd6.obj intd6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [intd6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fointepr.obj intepr.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [intepr.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fojoin.obj join.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [join.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folie6.obj lie6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lie6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folinopt.obj linopt.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [linopt.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foloesd.obj loesd.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [loesd.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folostpar2.obj lostpar2.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lostpar2.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folostpar3.obj lostpar3.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lostpar3.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Folostpart.obj lostpart.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [lostpart.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaincr.obj maincr.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [maincr.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomainia6.obj mainia6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [mainia6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomatrix.obj matrix.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [matrix.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomaxmin.obj maxmin.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [maxmin.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomidbloc6.obj midbloc6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [midbloc6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomul66.obj mul66.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [mul66.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fomywwerf.obj mywwerf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [mywwerf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foorbinit.obj orbinit.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [orbinit.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foord.obj ord.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ord.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foorderma6.obj orderma6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [orderma6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fophasad.obj phasad.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [phasad.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fopostpr.obj postpr.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [postpr.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foputorb.obj putorb.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [putorb.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foqmod.obj qmod.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [qmod.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foranecu.obj ranecu.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ranecu.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foresb6.obj resb6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [resb6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foresex.obj resex.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [resex.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foresl6.obj resl6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [resl6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forext6.obj rext6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rext6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foripple.obj ripple.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [ripple.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Formod.obj rmod.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rmod.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Forotatio6.obj rotatio6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [rotatio6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosearch.obj search.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [search.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosinpro.obj sinpro.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sinpro.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosixdaco6.obj sixdaco6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sixdaco6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosubre.obj subre.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [subre.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosubsea.obj subsea.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [subsea.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosumpos.obj sumpos.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [sumpos.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosynoda.obj synoda.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [synoda.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fosynuthck.obj synuthck.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [synuthck.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotake6.obj take6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [take6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotaked6.obj taked6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [taked6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothck4d.obj thck4d.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thck4d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothck6d.obj thck6d.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thck6d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothck6dua.obj thck6dua.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thck6dua.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothin4d.obj thin4d.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thin4d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothin6d.obj thin6d.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thin6d.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fothin6dua.obj thin6dua.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [thin6dua.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotrauthck.obj trauthck.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [trauthck.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotrauthin.obj trauthin.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [trauthin.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotrx6.obj trx6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [trx6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fotuer6.obj tuer6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [tuer6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foumlau6.obj umlau6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [umlau6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foumlauf.obj umlauf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [umlauf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowrite4.obj write4.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [write4.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowrite6.obj write6.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [write6.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowritebin.obj writebin.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [writebin.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowritelin.obj writelin.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [writelin.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowzset.obj wzset.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [wzset.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowzsubf.obj wzsubf.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [wzsubf.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Fowzsubv.obj wzsubv.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [wzsubv.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), c -Foxuflow.obj xuflow.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [xuflow.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), abend.obj adia.obj adib.obj ambm6.obj analie6.obj betalf.obj block.obj blockdis.obj caconv.obj calrms.obj chroma.obj cinvar.obj clor6.obj clorb.obj clorb2.obj combel.obj comnul.obj corrorb.obj cpart6.obj cphase.obj cpltwis.obj creat6.obj ctrbasi6.obj dacond6.obj dacopd6.obj dalie6s.obj dalind6.obj daprid6.obj daten.obj decoup.obj detune.obj dinv.obj dist1.obj distance.obj dlie6.obj eig66.obj envada.obj envar.obj envardis.obj envars.obj envarsv.obj envquad.obj errf.obj errff.obj error.obj fexpo6.obj fft.obj fit.obj flush.obj forest6.obj foxys.obj gam6.obj gbm6.obj gofix6.obj hbook.obj htal.obj htbl.obj htls.obj htrl.obj htul.obj hyper6.obj igmeta.obj intd6.obj intepr.obj join.obj lie6.obj linopt.obj loesd.obj lostpar2.obj lostpar3.obj lostpart.obj maincr.obj mainia6.obj matrix.obj maxmin.obj midbloc6.obj mul66.obj mywwerf.obj orbinit.obj ord.obj orderma6.obj phasad.obj postpr.obj putorb.obj qmod.obj ranecu.obj resb6.obj resex.obj resl6.obj rext6.obj ripple.obj rmod.obj rotatio6.obj search.obj sinpro.obj sixdaco6.obj subre.obj subsea.obj sumpos.obj synoda.obj synuthck.obj take6.obj taked6.obj thck4d.obj thck6d.obj thck6dua.obj thin4d.obj thin6d.obj thin6dua.obj trauthck.obj trauthin.obj trx6.obj tuer6.obj umlau6.obj umlauf.obj write4.obj write6.obj writebin.obj writelin.obj wzset.obj wzsubf.obj wzsubv.obj xuflow.obj -Fesixtrack, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [sixtrack] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/200.sixtrack/run/00000001/make.err'
+  Error with make!
+  Compile for '200.sixtrack' ended at:Mon Feb  9 20:02:05 2026 (1770663725)
+  Elapsed compile for '200.sixtrack': 00:00:00 (0)
+*** Error building 200.sixtrack
+
+-----------------------------------
+  Building 301.apsi ref base vc7.x87.exe default
+Wrote to makefile 'C:/speccpu2000/benchspec/CFP2000/301.apsi/run/00000001/Makefile.spec':
+TUNE=base
+EXT=vc7.x87.exe
+
+BENCHLANG        = F
+CC               = cl
+COPTIMIZE        = /Ox /GL /Op
+CXX              = cl
+CXXOPTIMIZE      = /Ox /GL /GX /GR
+F77              = 
+FC               = 
+FPBASE           = yes
+OS               = windows_nt
+USE_VPATH        = 0
+VENDOR           = 
+VPATH_CINCLUDE   = 
+VPATH_CXXINCLUDE = 
+VPATH_F90INCLUDE = 
+VPATH_FINCLUDE   = 
+VPATH_INCLUDE    = 
+abstol           = 1e-007
+action           = validate
+backup_config    = 1
+baseexe          = apsi
+basepeak         = 1
+benchdir         = benchspec
+benchmark        = 301.apsi
+bindir           = exe
+changedmd5       = 0
+check_md5        = 1
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = apsi_base.vc7.x87.exe
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = C:/speccpu2000/config/win32-x86-vc7.cfg
+datadir          = data
+deletebinaries   = 0
+deletework       = 0
+difflines        = 10
+dirprot          = 511
+endian           = 1234
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+ext              = vc7.x87.exe
+fast_rundir_verify = 0
+feedback         = 1
+fileprot         = 511
+help             = 0
+ignore_errors    = yes
+ignore_sigint    = 1
+inputdir         = input
+iterations       = 3
+line_width       = 0
+locking          = 1
+log              = log
+log_line_width   = 0
+lognum           = 004
+mach             = default
+make             = specmake
+make_no_clobber  = 0
+makeflags        = 
+max_active_compares = 0
+max_users        = 1
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = apsi
+nc               = 0
+num              = 301
+obiwan           = 
+os_exe_ext       = .exe
+output           = asc
+output_format    = asc
+outputdir        = output
+path             = C:/speccpu2000/benchspec/CFP2000/301.apsi
+prefix           = 
+rate             = 0
+rawfile          = 
+rawformat        = 0
+rebuild          = 0
+ref_tree_level   = Top level Config
+reftime          = reftime
+reltol           = 0.01
+reportable       = 1
+resultdir        = result
+run              = all
+safe_eval        = 1
+setpgrp_enabled  = 1
+setprocgroup     = 1
+sigint           = 2
+size             = ref
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff.bat
+specmake         = Makefile.spec
+specrun          = specinvoke
+srcalt           = 
+srcdir           = src
+subworkdir       = work
+table            = 1
+teeout           = 0
+teerunout        = 0
+top              = C:\speccpu2000
+tune             = base
+uid              = 0
+unbuffer         = 0
+use_submit_for_speed = 0
+username         = alumno
+users            = 1
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+workdir          = run
+worklist         = list
+  Compile for '301.apsi' started at:Mon Feb  9 20:02:05 2026 (1770663725)
+Issuing make command 'specmake  clean > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Stop make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  clean > make.out 2> make.err':
+del /q  apsi apsi.exe *.obj  core *.err *.out
+C:\speccpu2000\benchspec\CFP2000\301.apsi\run\00000001\make.err
+C:\speccpu2000\benchspec\CFP2000\301.apsi\run\00000001\make.out
+Error from make 'specmake  clean > make.out 2> make.err':
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+El proceso no tiene acceso al archivo porque est  siendo utilizado por otro proceso.
+Issuing make command 'specmake  build > make.out 2> make.err'
+Start make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Stop make command: Mon Feb  9 20:02:05 2026 (1770663725)
+Elapsed time for make command: 00:00:00 (0)
+Output from make 'specmake  build > make.out 2> make.err':
+c -Foapsi.obj                apsi.f
+apsi.obj     -Feapsi
+Error from make 'specmake  build > make.out 2> make.err':
+process_begin: CreateProcess((null), c -Foapsi.obj apsi.f, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: [apsi.obj] Error 2 (ignored)
+process_begin: CreateProcess((null), apsi.obj -Feapsi, ...) failed.
+make (e=2): El sistema no puede encontrar el archivo especificado.
+specmake: *** [apsi] Error 2
+Error with make 'specmake  build > make.out 2> make.err': check file 'C:/speccpu2000/benchspec/CFP2000/301.apsi/run/00000001/make.err'
+  Error with make!
+  Compile for '301.apsi' ended at:Mon Feb  9 20:02:05 2026 (1770663725)
+  Elapsed compile for '301.apsi': 00:00:00 (0)
+*** Error building 301.apsi
+Setting Up Run Directories
+  Setting up 177.mesa ref base vc7.x87.exe default: created
+  Setting up 179.art ref base vc7.x87.exe default: created
+  Setting up 183.equake ref base vc7.x87.exe default: created
+  Setting up 188.ammp ref base vc7.x87.exe default: created
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+  Running 177.mesa ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002
+    ../00000002/mesa_base.vc7.x87.exe -frames 1000 -meshfile mesa.in -ppmfile mesa.ppm
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002'
+comparing 'mesa.log' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+comparing 'mesa.ppm' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:02:06 2026 (1770663726)
+  Stop:     Mon Feb  9 20:02:21 2026 (1770663741)
+  Elapsed:  00:00:15 (15)
+  Reported: 15 515000000 15.515
+ Success 177.mesa ratio=9023.53, runtime=15.515000
+  Running 177.mesa ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002
+    ../00000002/mesa_base.vc7.x87.exe -frames 1000 -meshfile mesa.in -ppmfile mesa.ppm
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002'
+comparing 'mesa.log' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+comparing 'mesa.ppm' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:02:22 2026 (1770663742)
+  Stop:     Mon Feb  9 20:02:38 2026 (1770663758)
+  Elapsed:  00:00:16 (16)
+  Reported: 15 422000000 15.422
+ Success 177.mesa ratio=9077.94, runtime=15.422000
+  Running 177.mesa ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002
+    ../00000002/mesa_base.vc7.x87.exe -frames 1000 -meshfile mesa.in -ppmfile mesa.ppm
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002'
+comparing 'mesa.log' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+comparing 'mesa.ppm' with cw='', abstol='6', reltol='',obiwan='1',skiptol='6'
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/177.mesa/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:02:39 2026 (1770663759)
+  Stop:     Mon Feb  9 20:02:54 2026 (1770663774)
+  Elapsed:  00:00:15 (15)
+  Reported: 15 481000000 15.481
+ Success 177.mesa ratio=9043.34, runtime=15.481000
+
+-----------------------------------
+
+-----------------------------------
+  Running 179.art ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002
+    -o ref.1.out -e ref.1.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 110 -starty 200 -endx 160 -endy 240 -objects 10
+    -o ref.2.out -e ref.2.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 470 -starty 140 -endx 520 -endy 180 -objects 10
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002'
+comparing 'ref.1.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+comparing 'ref.2.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:02:55 2026 (1770663775)
+  Stop:     Mon Feb  9 20:03:08 2026 (1770663788)
+  Elapsed:  00:00:13 (13)
+  Reported: 12 781000000 12.781
+ Success 179.art ratio=20342.70, runtime=12.781000
+  Running 179.art ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002
+    -o ref.1.out -e ref.1.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 110 -starty 200 -endx 160 -endy 240 -objects 10
+    -o ref.2.out -e ref.2.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 470 -starty 140 -endx 520 -endy 180 -objects 10
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002'
+comparing 'ref.1.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+comparing 'ref.2.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:03:08 2026 (1770663788)
+  Stop:     Mon Feb  9 20:03:22 2026 (1770663802)
+  Elapsed:  00:00:14 (14)
+  Reported: 13 286000000 13.286
+ Success 179.art ratio=19569.47, runtime=13.286000
+  Running 179.art ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002
+    -o ref.1.out -e ref.1.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 110 -starty 200 -endx 160 -endy 240 -objects 10
+    -o ref.2.out -e ref.2.err ../00000002/art_base.vc7.x87.exe -scanfile c756hel.in -trainfile1 a10.img -trainfile2 hc.img -stride 2 -startx 470 -starty 140 -endx 520 -endy 180 -objects 10
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002'
+comparing 'ref.1.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+comparing 'ref.2.out' with cw='', abstol='', reltol='0.01',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/179.art/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:03:22 2026 (1770663802)
+  Stop:     Mon Feb  9 20:03:35 2026 (1770663815)
+  Elapsed:  00:00:13 (13)
+  Reported: 12 659000000 12.659
+ Success 179.art ratio=20538.75, runtime=12.659000
+
+-----------------------------------
+  Running 183.equake ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002
+    -i inp.in -o inp.out -e inp.err ../00000002/equake_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002'
+comparing 'inp.out' with cw='', abstol='', reltol='1e-005',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:03:35 2026 (1770663815)
+  Stop:     Mon Feb  9 20:03:47 2026 (1770663827)
+  Elapsed:  00:00:12 (12)
+  Reported: 11 871000000 11.871
+ Success 183.equake ratio=10951.06, runtime=11.871000
+  Running 183.equake ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002
+    -i inp.in -o inp.out -e inp.err ../00000002/equake_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002'
+comparing 'inp.out' with cw='', abstol='', reltol='1e-005',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:03:47 2026 (1770663827)
+  Stop:     Mon Feb  9 20:03:58 2026 (1770663838)
+  Elapsed:  00:00:11 (11)
+  Reported: 11 750000000 11.75
+ Success 183.equake ratio=11063.83, runtime=11.750000
+  Running 183.equake ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002
+    -i inp.in -o inp.out -e inp.err ../00000002/equake_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002'
+comparing 'inp.out' with cw='', abstol='', reltol='1e-005',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/183.equake/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:03:59 2026 (1770663839)
+  Stop:     Mon Feb  9 20:04:10 2026 (1770663850)
+  Elapsed:  00:00:11 (11)
+  Reported: 11 687000000 11.687
+ Success 183.equake ratio=11123.47, runtime=11.687000
+
+-----------------------------------
+
+-----------------------------------
+  Running 188.ammp ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002
+    -i ammp.in -o ammp.out -e ammp.err ../00000002/ammp_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002'
+comparing 'ammp.out' with cw='', abstol='0.0001', reltol='0.003',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:04:10 2026 (1770663850)
+  Stop:     Mon Feb  9 20:04:35 2026 (1770663875)
+  Elapsed:  00:00:25 (25)
+  Reported: 25 89000000 25.089
+ Success 188.ammp ratio=8768.78, runtime=25.089000
+  Running 188.ammp ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002
+    -i ammp.in -o ammp.out -e ammp.err ../00000002/ammp_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002'
+comparing 'ammp.out' with cw='', abstol='0.0001', reltol='0.003',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:04:36 2026 (1770663876)
+  Stop:     Mon Feb  9 20:05:01 2026 (1770663901)
+  Elapsed:  00:00:25 (25)
+  Reported: 25 810000000 25.81
+ Success 188.ammp ratio=8523.83, runtime=25.810000
+  Running 188.ammp ref base vc7.x87.exe default
+Commands to run: 
+    -u C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002
+    -i ammp.in -o ammp.out -e ammp.err ../00000002/ammp_base.vc7.x87.exe
+Specinvoke: C:/speccpu2000/bin/specinvoke -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -e speccmds.err -o speccmds.out -f speccmds.cmd
+comparing files in 'C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002'
+comparing 'ammp.out' with cw='', abstol='0.0001', reltol='0.003',obiwan='',skiptol=''
+Specinvoke: C:/speccpu2000/bin/specinvoke -E -d C:/speccpu2000/benchspec/CFP2000/188.ammp/run/00000002 -c 1 -e compare.err -o compare.out -f compare.cmd
+Benchmark Times:
+  Start:    Mon Feb  9 20:05:01 2026 (1770663901)
+  Stop:     Mon Feb  9 20:05:28 2026 (1770663928)
+  Elapsed:  00:00:27 (27)
+  Reported: 26 407000000 26.407
+ Success 188.ammp ratio=8331.12, runtime=26.407000
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+Error: 1x168.wupwise 1x171.swim 1x172.mgrid 1x173.applu 1x178.galgel 1x187.facerec 1x189.lucas 1x191.fma3d 1x200.sixtrack 1x301.apsi
+Success: 3x177.mesa 3x179.art 3x183.equake 3x188.ammp
+Producing Reports
+mach: default
+  ext: vc7.x87.exe
+    size: ref
+      set: int
+      set: fp
+        format: raw -> C:/speccpu2000/result/CFP2000.004.raw
+        format: ASCII -> C:/speccpu2000/result/CFP2000.004.asc
+runspec finished
