@@ -24,7 +24,6 @@ data_set_1 = [
     {"bench": "252.eon", "base_ref": 1300, "base_run": 22.6, "base_ratio": 5751},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 22.4, "base_ratio": 5804},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 22.2, "base_ratio": 5857},
-    {"bench": "253.perlbmk", "base_ref": 1800, "base_run": None, "base_ratio": None},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 25.2, "base_ratio": 4357},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 24.1, "base_ratio": 4566},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 24.7, "base_ratio": 4446},
@@ -62,7 +61,6 @@ data_set_2 = [
     {"bench": "252.eon", "base_ref": 1300, "base_run": 12.6, "base_ratio": 10297},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 12.9, "base_ratio": 10049},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 12.5, "base_ratio": 10374},
-    {"bench": "253.perlbmk", "base_ref": 1800, "base_run": None, "base_ratio": None},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 14.7, "base_ratio": 7478},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 14.4, "base_ratio": 7640},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 14.5, "base_ratio": 7611},
@@ -100,7 +98,6 @@ data_set_3 = [
     {"bench": "252.eon", "base_ref": 1300, "base_run": 15.7, "base_ratio": 8292},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 15.7, "base_ratio": 8288},
     {"bench": "252.eon", "base_ref": 1300, "base_run": 15.6, "base_ratio": 8325},
-    {"bench": "253.perlbmk", "base_ref": 1800, "base_run": None, "base_ratio": None},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 13.0, "base_ratio": 8431},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 12.9, "base_ratio": 8507},
     {"bench": "254.gap", "base_ref": 1100, "base_run": 13.0, "base_ratio": 8480},
@@ -116,9 +113,9 @@ data_set_3 = [
 ]
 
 # 2. Creación de DataFrames y concatenación
-df1 = pl.DataFrame(data_set_1).with_columns(pl.lit("Dispositivo 1").alias("device"))
-df2 = pl.DataFrame(data_set_2).with_columns(pl.lit("Dispositivo 2").alias("device"))
-df3 = pl.DataFrame(data_set_3).with_columns(pl.lit("Dispositivo 3").alias("device"))
+df1 = pl.DataFrame(data_set_1).with_columns(pl.lit("Sala").alias("device"))
+df2 = pl.DataFrame(data_set_2).with_columns(pl.lit("Aula").alias("device"))
+df3 = pl.DataFrame(data_set_3).with_columns(pl.lit("Personal").alias("device"))
 
 # 1. Combinar los datos (asumiendo que df1, df2 y df3 ya están declarados)
 all_data = pl.concat([df1, df2, df3])
@@ -136,7 +133,7 @@ df_final = (
 
 def save_clean_plot(column, title, ylabel, filename):
     plt.figure(figsize=(12, 6))
-    colors = {"Dispositivo 1": "tab:blue", "Dispositivo 2": "tab:orange", "Dispositivo 3": "tab:green"}
+    colors = {"Sala": "tab:blue", "Aula": "tab:orange", "Personal": "tab:green"}
     
     for dev in colors:
         # Filtramos por dispositivo
