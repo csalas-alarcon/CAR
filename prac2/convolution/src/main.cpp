@@ -1,11 +1,11 @@
 
-// sbt Imports
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
-#define STB_IMAGE_WRITE_IMPLEMENTATION
+// Importaciones sbt  - Libreria de Sean Burry
+#define STB_IMAGE_IMPLEMENTATION // Definimos un macro
+#include "stb_image.h" // que se encuentra definido aquí.
+#define STB_IMAGE_WRITE_IMPLEMENTATION // Lo mismo que antes
 #include "stb_image_write.h"
 
-// std imports
+// Importaciones std
 #include <iostream>
 #include <vector>
 #include <filesystem>
@@ -23,16 +23,35 @@ struct Imagen {
     unsigned char* data;
 };
 
-/*
-*
-* Esta función obtiene todas las rutas de las imágenes dentro de una carpeta
-*
-* Input:
-*     - string carpeta: String con la ruta de la carpeta que contiene las imágenes
-*
-* Output:
-*     - vector<string>: Vector de strings con las rutas de las imágenes
+/**
+ * Obtener todas las rutas de las imágenes dentro de una carpeta.
+ *
+ * Parameters
+ * ----------
+ * carpeta : const std::string&
+ *     Ruta de la carpeta que contiene las imágenes.
+ *
+ * Returns
+ * -------
+ * std::vector<std::string>
+ *     Vector de strings con las rutas completas de las imágenes que tienen
+ *     extensiones válidas: ".png", ".jpg", ".jpeg", ".bmp", ".tga".
+ *
+ * Notes
+ * -----
+ * Esta función utiliza C++17 std::filesystem para iterar sobre los archivos
+ * de la carpeta. Solo se incluyen archivos regulares; los directorios o
+ * enlaces simbólicos son ignorados. La función filtra las imágenes según
+ * su extensión y devuelve sus rutas completas como strings.
+ *
+ * Example
+ * -------
+ * std::vector<std::string> images = obtener_rutas_imagenes("./data/");
+ * for (const auto& path : images) {
+ *     std::cout << path << std::endl;
+ * }
 */
+
 vector<string> obtener_rutas_imagenes(const string& carpeta) {
     std::vector<string> archivos;
 
@@ -49,12 +68,14 @@ vector<string> obtener_rutas_imagenes(const string& carpeta) {
 }
 
 int main() {
+    // Consigue direcciones de imagenes
+    vector<string> paths = obtener_rutas_imagenes("./../imgs/jpg/");
 
-    vector<string> paths = obtener_rutas_imagenes("./Birds_25/train/Asian-Green-Bee-Eater/");
-
+    // Itera sobre cada dirección
     for (const string& path : paths) {
-        // Cargar imagen
+        // Instancia Struct
         Imagen img;
+        // Assigna un pointer ...
         img.data = stbi_load(path.c_str(), &img.w, &img.h, &img.c, INPUT_CHANNELS);
 
         // Comprobar si se ha leido correctamente
