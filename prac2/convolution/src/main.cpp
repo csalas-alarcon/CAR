@@ -9,49 +9,53 @@
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include <algorithm> // Para std::min y std::max
+#include <chrono> // Para medir tiempos
 
 // Simple namespace
 using namespace std;
 
-// CONSTANTS
+// Constantes
 #define INPUT_CHANNELS 3
 #define OUTPUT_DIRECTORY "./output/"
 
-// DATA Structures
+// --- Kernel: Desenfoque de caja (Box Blur) ---
+vector<vector<float>> box_blur = {
+    {1.0f/9.0f, 1.0f/9.0f, 1.0f/9.0f},
+    {1.0f/9.0f, 1.0f/9.0f, 1.0f/9.0f},
+    {1.0f/9.0f, 1.0f/9.0f, 1.0f/9.0f}
+};
+
+// --- Kernel: Detección de Bordes (Sobel Horizontal) ---
+vector<vector<float>> sobel_h = {
+    { 1.0f,  2.0f,  1.0f},
+    { 0.0f,  0.0f,  0.0f},
+    {-1.0f, -2.0f, -1.0f}
+};
+
+// --- Kernel: Filtro de Repujado (Emboss) ---
+vector<vector<float>> emboss = {
+    {-2.0f, -1.0f, 0.0f},
+    {-1.0f,  1.0f, 1.0f},
+    { 0.0f,  1.0f, 2.0f}
+};
+
+// --- Kernel: Desenfoque Gaussiano (5x5) ---
+vector<vector<float>> kernel = {
+    {1/256.0f,  4/256.0f,  6/256.0f,  4/256.0f, 1/256.0f},
+    {4/256.0f, 16/256.0f, 24/256.0f, 16/256.0f, 4/256.0f},
+    {6/256.0f, 24/256.0f, 36/256.0f, 24/256.0f, 6/256.0f},
+    {4/256.0f, 16/256.0f, 24/256.0f, 16/256.0f, 4/256.0f},
+    {1/256.0f,  4/256.0f,  6/256.0f,  4/256.0f, 1/256.0f}
+};
+
+// Structuras de Información
 struct Imagen {
     int w, h, c;
     unsigned char* data;
 };
 
-/**
- * Obtener todas las rutas de las imágenes dentro de una carpeta.
- *
- * Parameters
- * ----------
- * carpeta : const std::string&
- *     Ruta de la carpeta que contiene las imágenes.
- *
- * Returns
- * -------
- * std::vector<std::string>
- *     Vector de strings con las rutas completas de las imágenes que tienen
- *     extensiones válidas: ".png", ".jpg", ".jpeg", ".bmp", ".tga".
- *
- * Notes
- * -----
- * Esta función utiliza C++17 std::filesystem para iterar sobre los archivos
- * de la carpeta. Solo se incluyen archivos regulares; los directorios o
- * enlaces simbólicos son ignorados. La función filtra las imágenes según
- * su extensión y devuelve sus rutas completas como strings.
- *
- * Example
- * -------
- * std::vector<std::string> images = obtener_rutas_imagenes("./data/");
- * for (const auto& path : images) {
- *     std::cout << path << std::endl;
- * }
-*/
-
+// FUNCIONES
 vector<string> obtener_rutas_imagenes(const string& carpeta) {
     std::vector<string> archivos;
 
@@ -67,6 +71,51 @@ vector<string> obtener_rutas_imagenes(const string& carpeta) {
     return archivos;
 }
 
+Imagen applicar_kernel(const Imagen& entrada, const vector<vector<float>>& kernel) {
+    int k_h = kernel.size(); // Conseguimos Altura del Kernel
+    int k_w = kernel[0].size(); // Conseguimos Anchura del Kernel
+
+    Imagen salida; // Instanciamos la Salida con el Struct Imagen
+    // Empequenyecemos la salida para evitar salirse de la imagen.
+    salida.w = entrada.w - k_w + 1; 
+    salida.h = entrada.h - k_h + 1;
+    salida.c = entrada.c;
+    // // Definimos el tamanyo de la imagen en Unsigned Chars.
+    salida.data = new unsigned char[salida.w * salida.h * salida.c];
+
+    // Para cada combinación de Y y X
+    for (int y = 0; y < salida.h; y++) {
+        for (int x = 0; x < salida.w; x++) {
+            // Para cada Canal
+            for (int c = 0; c < salida.c; c++) {
+                float suma = 0.0f;
+
+                // Para cada Y y X del Kernel
+                for (int ky = 0; ky < k_h; ky++) {
+                    for (int kx = 0; kx < k_w; kx++) {
+                        // Calculamos el Indice en Data
+                        int ix = x + kx;
+                        int iy = y + ky;
+                        // Nos saltamos iy lineas + ix desplazamiento en la linea
+                        // * el número de Canales más el Offset
+                        int idx = (iy * entrada.w + ix) * entrada.c + c;
+                        // Multiplicamos el Kernel por el valor correspondiente
+                        suma += kernel[ky][kx] * (float)entrada.data[idx];
+                    }
+                }
+
+                // Calculamos el Indice en Data
+                int out_idx = (y * salida.w + x) * salida.c + c;
+                suma = min(255.0f, max(0.0f, suma)); // Clamping Evitamos Desbordamientos
+                // Asignamos el Valor
+                salida.data[out_idx] = (unsigned char) suma;
+            }
+        }
+    }
+    return salida;
+}
+
+// PUNTO DE ENTRADA
 int main() {
     // Consigue direcciones de imagenes
     vector<string> paths = obtener_rutas_imagenes("./../imgs/jpg/");
