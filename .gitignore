@@ -8,4 +8,10 @@
 .venv/
 prac/.venv/
 
-imgs/
+data/
+bin/
+
+output/
+.vscode/
+.vscode 
+

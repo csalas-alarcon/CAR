@@ -15,8 +15,20 @@
 // Simple namespace
 using namespace std;
 
+// Structuras de Información
+struct Imagen {
+    int w, h, c;
+    unsigned char* data;
+};
+
+struct Kernel {
+    string name; 
+    vector<vector<float>> data;
+};
+
 // Constantes
 #define INPUT_CHANNELS 3
+#define INPUT_DIRECTORY "./data/jpg/"
 #define OUTPUT_DIRECTORY "./output/"
 
 // --- Kernel: Desenfoque de caja (Box Blur) ---
@@ -41,7 +53,7 @@ vector<vector<float>> emboss = {
 };
 
 // --- Kernel: Desenfoque Gaussiano (5x5) ---
-vector<vector<float>> kernel = {
+vector<vector<float>> gauss = {
     {1/256.0f,  4/256.0f,  6/256.0f,  4/256.0f, 1/256.0f},
     {4/256.0f, 16/256.0f, 24/256.0f, 16/256.0f, 4/256.0f},
     {6/256.0f, 24/256.0f, 36/256.0f, 24/256.0f, 6/256.0f},
@@ -49,13 +61,15 @@ vector<vector<float>> kernel = {
     {1/256.0f,  4/256.0f,  6/256.0f,  4/256.0f, 1/256.0f}
 };
 
-// Structuras de Información
-struct Imagen {
-    int w, h, c;
-    unsigned char* data;
+vector<Kernel> kernels = {
+    {"blur", box_blur},
+    {"sobel", sobel_h},
+    {"emboss", emboss},
+    {"gaussian", gauss},
 };
 
 // FUNCIONES
+// Consigue Rutas de Archivos
 vector<string> obtener_rutas_imagenes(const string& carpeta) {
     std::vector<string> archivos;
 
@@ -71,7 +85,8 @@ vector<string> obtener_rutas_imagenes(const string& carpeta) {
     return archivos;
 }
 
-Imagen applicar_kernel(const Imagen& entrada, const vector<vector<float>>& kernel) {
+// Aplica el Kernel
+Imagen aplicar_kernel(const Imagen& entrada, const vector<vector<float>>& kernel) {
     int k_h = kernel.size(); // Conseguimos Altura del Kernel
     int k_w = kernel[0].size(); // Conseguimos Anchura del Kernel
 
@@ -118,46 +133,42 @@ Imagen applicar_kernel(const Imagen& entrada, const vector<vector<float>>& kerne
 // PUNTO DE ENTRADA
 int main() {
     // Consigue direcciones de imagenes
-    vector<string> paths = obtener_rutas_imagenes("./../imgs/jpg/");
+    vector<string> all_paths = obtener_rutas_imagenes(INPUT_DIRECTORY);
+    // Nos quedamos solo con las 8 primeras
+    vector<string> paths(all_paths.begin(), all_paths.begin() + 8);
 
+    int img_counter = 1;
     // Itera sobre cada dirección
     for (const string& path : paths) {
-        // Instancia Struct
-        Imagen img;
-        // Assigna un pointer ...
-        img.data = stbi_load(path.c_str(), &img.w, &img.h, &img.c, INPUT_CHANNELS);
 
-        // Comprobar si se ha leido correctamente
+        Imagen img; // Nueva Instancia Imagen
+        // Serializa la imagen a RGB
+        img.data = stbi_load(path.c_str(), &img.w, &img.h, &img.c, INPUT_CHANNELS);
+        // Comprobar Error
         if (img.data == NULL) {
             std::cerr << "No se pudo cargar: " << path << endl;
-            exit(-1);
+            continue;
         }
         
+        // PROCESAMIENTO / CONVOLUCION
+        for (const auto& k : kernels) {
+            Imagen output_img = aplicar_kernel(img, k.data);
+            string new_name = k.name + "_" + to_string(img_counter) + ".jpg";
+            string new_path = string(OUTPUT_DIRECTORY) + new_name;
 
-        
-        /*
-        * Aplicar el algoritmo de la convolución AQUI
-        */
-        Imagen output_img;
-        const int output_channels = INPUT_CHANNELS; // Cambiar si hay canales de salida diferentes
+            int res = stbi_write_jpg(new_path.c_str(), output_img.w, output_img.h, output_img.c, output_img.data, 90);
 
-        printf("Imagen: %s, w: %i, h: %i, c: %i\n", path.c_str(), img.w, img.h, img.c);
+            if (res == 0) {
+                std::cerr << "Error escribiendo: " << new_path << endl;
+            } else {
+                printf("Guardado: %s\n", new_name.c_str());
+            }
 
-
-
-        // Escribir imagen
-        string new_path = "conv_" + path.substr(path.find_last_of("/\\") + 1);;
-        new_path = OUTPUT_DIRECTORY + new_path;
-        //int resultado_escritura = stbi_write_jpg(new_path.c_str(), output_img.w, output_img.h, output_channels, output_img.data, 50);
-        int resultado_escritura = stbi_write_jpg(new_path.c_str(), img.w, img.h, img.c, img.data, 50);
-
-        if (resultado_escritura == 0) {
-            std:cerr << "Error: no se ha podido escribir el archivo " << new_path << endl;
-            exit(-1);
+            delete[] output_img.data;
         }
-
-        // Liberar memoria imagen
+    
         stbi_image_free(img.data);
+        img_counter ++;
     }
     return 0;
 }
