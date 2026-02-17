@@ -3,6 +3,6 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
-python src/visualization.py
+python code/visualize.py
 
 rm -rf .venv
