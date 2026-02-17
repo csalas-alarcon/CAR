@@ -1,0 +1,113 @@
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 253.perlbmk base did not have enough runs!                                 #
+# Error 253.perlbmk: Error with make!                                        #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+                            SPEC CINT2000 Summary
+                                    -- --
+                           Mon Feb  9 23:36:49 2026
+
+SPEC License #0     Test date: --           Hardware availability: --
+Tester: --                                  Software availability: --
+
+                                     Estimated                     Estimated
+                   Base      Base      Base      Peak      Peak      Peak
+   Benchmarks    Ref Time  Run Time   Ratio    Ref Time  Run Time   Ratio
+   ------------  --------  --------  --------  --------  --------  --------
+   164.gzip          1400    43.7    3204    *                             
+   164.gzip          1400    43.8    3198                                  
+   164.gzip          1400    43.7    3204                                  
+   175.vpr           1400    26.0    5383    *                             
+   175.vpr           1400    26.3    5315                                  
+   175.vpr           1400    25.8    5426                                  
+   176.gcc           1100    11.2    9850    *                             
+   176.gcc           1100    11.2    9861                                  
+   176.gcc           1100    11.2    9824                                  
+   181.mcf           1800    12.7    14192                                  
+   181.mcf           1800    12.9    13953                                  
+   181.mcf           1800    12.9    14007    *                             
+   186.crafty        1000    12.9    7776                                  
+   186.crafty        1000    12.8    7823                                  
+   186.crafty        1000    12.8    7815    *                             
+   197.parser        1800    31.0    5807                                  
+   197.parser        1800    31.2    5764    *                             
+   197.parser        1800    31.4    5740                                  
+   252.eon           1300    15.7    8292    *                             
+   252.eon           1300    15.7    8288                                  
+   252.eon           1300    15.6    8325                                  
+   253.perlbmk       1800        --          X                             
+   254.gap           1100    13.0    8431                                  
+   254.gap           1100    12.9    8507                                  
+   254.gap           1100    13.0    8480    *                             
+   255.vortex        1900    19.2    9887                                  
+   255.vortex        1900    19.3    9856                                  
+   255.vortex        1900    19.3    9858    *                             
+   256.bzip2         1500    29.3    5114                                  
+   256.bzip2         1500    28.6    5239                                  
+   256.bzip2         1500    28.9    5188    *                             
+   300.twolf         3000    37.7    7951                                  
+   300.twolf         3000    38.0    7896    *                             
+   300.twolf         3000    38.9    7718                                  
+   ========================================================================
+   164.gzip          1400    43.7    3204    *                             
+   175.vpr           1400    26.0    5383    *                             
+   176.gcc           1100    11.2    9850    *                             
+   181.mcf           1800    12.9    14007    *                             
+   186.crafty        1000    12.8    7815    *                             
+   197.parser        1800    31.2    5764    *                             
+   252.eon           1300    15.7    8292    *                             
+   253.perlbmk                               X                             
+   254.gap           1100    13.0    8480    *                             
+   255.vortex        1900    19.3    9858    *                             
+   256.bzip2         1500    28.9    5188    *                             
+   300.twolf         3000    38.0    7896    *                             
+   Est. SPECint_base2000                   --
+   Est. SPECint2000                                                      --
+
+
+                                   HARDWARE
+                                   --------
+     Hardware Vendor: --
+          Model Name: --
+                 CPU: --
+             CPU MHz: --
+                 FPU: --
+      CPU(s) enabled: --
+    CPU(s) orderable: --
+            Parallel: --
+       Primary Cache: --
+     Secondary Cache: --
+            L3 Cache: --
+         Other Cache: --
+              Memory: --
+      Disk Subsystem: --
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: --
+            Compiler: --
+         File System: --
+        System State: --
+
+
+                                    NOTES
+                                    -----
+    --
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 253.perlbmk base did not have enough runs!                                 #
+# Error 253.perlbmk: Error with make!                                        #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 1999-2005 Standard Performance Evaluation Corporation
+Generated on Mon Feb  9 23:58:52 2026 by SPEC CPU2000 ASCII formatter v2.1

@@ -1,0 +1,139 @@
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 189.lucas base did not have enough runs!                                   #
+# 168.wupwise base did not have enough runs!                                 #
+# 178.galgel base did not have enough runs!                                  #
+# 187.facerec base did not have enough runs!                                 #
+# 171.swim base did not have enough runs!                                    #
+# 191.fma3d base did not have enough runs!                                   #
+# 301.apsi base did not have enough runs!                                    #
+# 200.sixtrack base did not have enough runs!                                #
+# 172.mgrid base did not have enough runs!                                   #
+# 173.applu base did not have enough runs!                                   #
+# Error 168.wupwise: Error with make!                                        #
+# Error 171.swim: Error with make!                                           #
+# Error 172.mgrid: Error with make!                                          #
+# Error 173.applu: Error with make!                                          #
+# Error 178.galgel: Error with make!                                         #
+# Error 187.facerec: Error with make!                                        #
+# Error 189.lucas: Error with make!                                          #
+# Error 191.fma3d: Error with make!                                          #
+# Error 200.sixtrack: Error with make!                                       #
+# Error 301.apsi: Error with make!                                           #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+                             SPEC CFP2000 Summary
+                                    -- --
+                           Fri Feb 13 12:55:27 2026
+
+SPEC License #0     Test date: --           Hardware availability: --
+Tester: --                                  Software availability: --
+
+                                     Estimated                     Estimated
+                   Base      Base      Base      Peak      Peak      Peak
+   Benchmarks    Ref Time  Run Time   Ratio    Ref Time  Run Time   Ratio
+   ------------  --------  --------  --------  --------  --------  --------
+   168.wupwise       1600        --          X                             
+   171.swim          3100        --          X                             
+   172.mgrid         1800        --          X                             
+   173.applu         2100        --          X                             
+   177.mesa          1400    18.7    7489    *                             
+   177.mesa          1400    20.9    6706                                  
+   177.mesa          1400    18.5    7586                                  
+   178.galgel        2900        --          X                             
+   179.art           2600     6.43   40454                                  
+   179.art           2600     6.43   40417    *                             
+   179.art           2600     6.45   40323                                  
+   183.equake        1300    12.0    10835    *                             
+   183.equake        1300    11.9    10936                                  
+   183.equake        1300    12.2    10668                                  
+   187.facerec       1900        --          X                             
+   188.ammp          2200    28.0    7846    *                             
+   188.ammp          2200    26.3    8371                                  
+   188.ammp          2200    28.9    7624                                  
+   189.lucas         2000        --          X                             
+   191.fma3d         2100        --          X                             
+   200.sixtrack      1100        --          X                             
+   301.apsi          2600        --          X                             
+   ========================================================================
+   168.wupwise                               X                             
+   171.swim                                  X                             
+   172.mgrid                                 X                             
+   173.applu                                 X                             
+   177.mesa          1400    18.7    7489    *                             
+   178.galgel                                X                             
+   179.art           2600     6.43   40417    *                             
+   183.equake        1300    12.0    10835    *                             
+   187.facerec                               X                             
+   188.ammp          2200    28.0    7846    *                             
+   189.lucas                                 X                             
+   191.fma3d                                 X                             
+   200.sixtrack                              X                             
+   301.apsi                                  X                             
+   Est. SPECfp_base2000                    --
+   Est. SPECfp2000                                                       --
+
+
+                                   HARDWARE
+                                   --------
+     Hardware Vendor: --
+          Model Name: --
+                 CPU: --
+             CPU MHz: --
+                 FPU: --
+      CPU(s) enabled: --
+    CPU(s) orderable: --
+            Parallel: --
+       Primary Cache: --
+     Secondary Cache: --
+            L3 Cache: --
+         Other Cache: --
+              Memory: --
+      Disk Subsystem: --
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: --
+            Compiler: --
+         File System: --
+        System State: --
+
+
+                                    NOTES
+                                    -----
+    --
+##############################################################################
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+#                                                                            #
+# 189.lucas base did not have enough runs!                                   #
+# 168.wupwise base did not have enough runs!                                 #
+# 178.galgel base did not have enough runs!                                  #
+# 187.facerec base did not have enough runs!                                 #
+# 171.swim base did not have enough runs!                                    #
+# 191.fma3d base did not have enough runs!                                   #
+# 301.apsi base did not have enough runs!                                    #
+# 200.sixtrack base did not have enough runs!                                #
+# 172.mgrid base did not have enough runs!                                   #
+# 173.applu base did not have enough runs!                                   #
+# Error 168.wupwise: Error with make!                                        #
+# Error 171.swim: Error with make!                                           #
+# Error 172.mgrid: Error with make!                                          #
+# Error 173.applu: Error with make!                                          #
+# Error 178.galgel: Error with make!                                         #
+# Error 187.facerec: Error with make!                                        #
+# Error 189.lucas: Error with make!                                          #
+# Error 191.fma3d: Error with make!                                          #
+# Error 200.sixtrack: Error with make!                                       #
+# Error 301.apsi: Error with make!                                           #
+#                                                                            #
+#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 1999-2005 Standard Performance Evaluation Corporation
+Generated on Fri Feb 13 12:58:53 2026 by SPEC CPU2000 ASCII formatter v2.1

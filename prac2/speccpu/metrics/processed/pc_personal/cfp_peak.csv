@@ -1,0 +1,5 @@
+Benchmark	Peak_Ref_Time	Peak_Run_Time	Peak_Ratio
+177.mesa	1400	32.2	4352
+179.art	2600	23.0	11289
+183.equake	1300	29.9	4354
+188.ammp	2200	72.4	3038

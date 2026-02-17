@@ -1,0 +1,5 @@
+Benchmark	Ref_Time	Run_Time	Ratio
+177.mesa	1400	18.7	7489
+179.art	2600	6.43	40417
+183.equake	1300	12.0	10835
+188.ammp	2200	28.0	7846
