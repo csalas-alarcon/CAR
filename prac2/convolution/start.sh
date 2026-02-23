@@ -28,7 +28,9 @@ mkdir -p bin
 rm -f bin/*
 
 echo "[START]- Compilando Proyecto con Librerias" 
-g++ -std=c++17 src/main.cpp -I./vendor -o bin/image_conv
+g++ -std=c++17 src/main.cpp -I./vendor -o bin/image_conv_O0 -O0
+g++ -std=c++17 src/main.cpp -I./vendor -o bin/image_conv_O3 -O3
 
 echo "[START]- Ejecutando Programa"
-./bin/image_conv
+./bin/image_conv_O0 > main_O0.txt
+./bin/image_conv_O3 > main_O3.txt
