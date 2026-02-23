@@ -39,7 +39,10 @@ def generate_spec_tables():
             ma_tr = df[ref_col].mean()
             ma_te = df[run_col].mean()
             ma_ratio = df[ratio_col].mean()
-            geomean_ratio = calculate_geometric_mean(df[ratio_col])
+            
+            gm_tr = calculate_geometric_mean(df[ref_col])
+            gm_te = calculate_geometric_mean(df[run_col])
+            gm_ratio = calculate_geometric_mean(df[ratio_col])
 
             # 3. Prepare data for the Table
             # Create a copy for display to avoid modifying original data
@@ -47,10 +50,8 @@ def generate_spec_tables():
             
             # Add summary rows
             summaries = [
-                ["MA(TR)", f"{ma_tr:.2f}", "", ""],
-                ["MA(TE)", "", f"{ma_te:.2f}", ""],
-                ["MA(TR/TE)", "", "", f"{ma_ratio:.2f}"],
-                ["SPEC Score (GeoMean)", "", "", f"**{geomean_ratio:.2f}**"]
+                ["Arithmetic Mean", f"{ma_tr:.2f}", f"{ma_te:.2f}", f"{ma_ratio:.2f}"],
+                ["Geometric Mean (GM)", f"{gm_tr:.2f}", f"{gm_te:.2f}", f"{gm_ratio:.2f}"],
             ]
             
             # 4. Plotting the Table

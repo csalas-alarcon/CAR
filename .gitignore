@@ -10,6 +10,7 @@ prac/.venv/
 
 data/
 bin/
+graphics
 graphics/*
 
 output/
