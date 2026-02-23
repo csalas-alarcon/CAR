@@ -143,7 +143,7 @@ int main() {
     // Consigue direcciones de imagenes
     vector<string> all_paths = obtener_rutas_imagenes(INPUT_DIRECTORY);
     // Nos quedamos solo con las 8 primeras
-    vector<string> paths(all_paths.begin(), all_paths.begin() + 100);
+    vector<string> paths(all_paths.begin(), all_paths.begin() + 1000);
 
     int img_counter = 1;
     // Itera sobre cada dirección
