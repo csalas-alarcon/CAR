@@ -28,7 +28,7 @@ struct Kernel {
 
 // Constantes
 #define INPUT_CHANNELS 3
-#define INPUT_DIRECTORY "./data/dataset_cats_dogs/PetImages/Dog" //"./data/jpg/"
+#define INPUT_DIRECTORY "./data/jpg/" //"./data/dataset_cats_dogs/PetImages/Dog" //"./data/jpg/"
 #define OUTPUT_DIRECTORY "./output/"
 
 // --- Kernel: Desenfoque de caja (Box Blur) ---
