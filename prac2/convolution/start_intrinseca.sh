@@ -31,10 +31,3 @@ echo "[START]- Preparando tiempos_intrinseca/"
 mkdir -p tiempos_intrinseca
 rm -f tiempos_intrinseca/*
 
-echo "[START]- Compilando Proyecto con Librerias" 
-g++ src/main_intrinseca.cpp -o bin_intrinseca/convolucion_intrinseca_O3 -Ivendor -std=c++17 -O3 -msse4.1 -lstdc++fs
-g++ src/main_intrinseca.cpp -o bin_intrinseca/convolucion_intrinseca_O0 -Ivendor -std=c++17 -O0 -msse4.1 -lstdc++fs
-
-echo "[START]- Ejecutando Programa"
-./bin_intrinseca/convolucion_intrinseca_O3 > tiempos_intrinseca/main_intrinseca_O3.txt
-./bin_intrinseca/convolucion_intrinseca_O0 > tiempos_intrinseca/main_intrinseca_O0.txt

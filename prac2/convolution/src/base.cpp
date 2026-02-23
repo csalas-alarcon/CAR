@@ -11,7 +11,6 @@
 #include <filesystem>
 #include <algorithm> // Para std::min y std::max
 #include <chrono> // Para medir tiempos
-#include <immintrin.h> // Cabecera para intrínsecas (SSE)
 
 // Simple namespace
 using namespace std;
@@ -30,7 +29,7 @@ struct Kernel {
 // Constantes
 #define INPUT_CHANNELS 3
 #define INPUT_DIRECTORY "./data/jpg/" //"./data/dataset_cats_dogs/PetImages/Dog" //"./data/jpg/"
-#define OUTPUT_DIRECTORY "./output_intrinseca/"
+#define OUTPUT_DIRECTORY "./output/base/"
 
 // --- Kernel: Desenfoque de caja (Box Blur) ---
 vector<vector<float>> box_blur = {
@@ -88,69 +87,44 @@ vector<string> obtener_rutas_imagenes(const string& carpeta) {
 
 // Aplica el Kernel
 Imagen aplicar_kernel(const Imagen& entrada, const vector<vector<float>>& kernel) {
-    int k_h = kernel.size();
-    int k_w = kernel[0].size();
+    int k_h = kernel.size(); // Conseguimos Altura del Kernel
+    int k_w = kernel[0].size(); // Conseguimos Anchura del Kernel
 
-    Imagen salida;
+    Imagen salida; // Instanciamos la Salida con el Struct Imagen
+    // Empequenyecemos la salida para evitar salirse de la imagen.
     salida.w = entrada.w - k_w + 1; 
     salida.h = entrada.h - k_h + 1;
-    salida.c = entrada.c; // Sabemos que es 3 (RGB)
+    salida.c = entrada.c;
+    // Definimos el tamanyo de la imagen en Unsigned Chars.
     salida.data = new unsigned char[salida.w * salida.h * salida.c];
 
-    // Bucle Y y X (Recorremos la imagen de salida)
+    // Para cada combinación de Y y X
     for (int y = 0; y < salida.h; y++) {
         for (int x = 0; x < salida.w; x++) {
-            
-            // --- PASO 1: Preparar la "Caja" SSE ---
-            // _mm_setzero_ps() crea un vector de 4 floats inicializados a 0.0f
-            // Contendrá: [Suma_R, Suma_G, Suma_B, 0.0]
-            __m128 sum_vec = _mm_setzero_ps();
+            // Para cada Canal
+            for (int c = 0; c < salida.c; c++) {
+                float suma = 0.0f;
 
-            // Recorremos la ventana del Kernel
-            for (int ky = 0; ky < k_h; ky++) {
-                for (int kx = 0; kx < k_w; kx++) {
-                    
-                    int ix = x + kx;
-                    int iy = y + ky;
-                    int idx = (iy * entrada.w + ix) * entrada.c; // Índice base del píxel
-
-                    // --- PASO 2: Cargar y empaquetar los 3 canales ---
-                    // Extraemos los valores unsigned char y los pasamos a float
-                    float r = (float)entrada.data[idx];
-                    float g = (float)entrada.data[idx + 1];
-                    float b = (float)entrada.data[idx + 2];
-
-                    // _mm_set_ps empaqueta 4 floats en un registro SSE.
-                    // ATENCIÓN: Esta función recibe los argumentos en orden inverso (w, z, y, x)
-                    // Así que le pasamos (Vacio, B, G, R) para que queden en orden normal en memoria.
-                    __m128 pixel_vec = _mm_set_ps(0.0f, b, g, r);
-
-                    // --- PASO 3: Preparar el valor del kernel ---
-                    // _mm_set1_ps copia un único valor en los 4 huecos del registro.
-                    // Queda así: [Kernel_val, Kernel_val, Kernel_val, Kernel_val]
-                    __m128 kernel_vec = _mm_set1_ps(kernel[ky][kx]);
-
-                    // --- PASO 4: Multiplicar y Acumular ---
-                    // _mm_mul_ps: Multiplica pixel_vec * kernel_vec (los 4 a la vez)
-                    // _mm_add_ps: Se lo suma a sum_vec (los 4 a la vez)
-                    __m128 prod = _mm_mul_ps(pixel_vec, kernel_vec);
-                    sum_vec = _mm_add_ps(sum_vec, prod);
+                // Para cada Y y X del Kernel
+                for (int ky = 0; ky < k_h; ky++) {
+                    for (int kx = 0; kx < k_w; kx++) {
+                        // Calculamos el Indice en Data
+                        int ix = x + kx;
+                        int iy = y + ky;
+                        // Nos saltamos iy lineas + ix desplazamiento en la linea
+                        // * el número de Canales más el Offset
+                        int idx = (iy * entrada.w + ix) * entrada.c + c;
+                        // Multiplicamos el Kernel por el valor correspondiente
+                        suma += kernel[ky][kx] * (float)entrada.data[idx];
+                    }
                 }
+
+                // Calculamos el Indice en Data
+                int out_idx = (y * salida.w + x) * salida.c + c;
+                suma = min(255.0f, max(0.0f, suma)); // Clamping Evitamos Desbordamientos
+                // Asignamos el Valor
+                salida.data[out_idx] = (unsigned char) suma;
             }
-
-            // --- PASO 5: Desempaquetar el resultado ---
-            // Sacamos los 4 floats del registro SSE a un array normal de C++
-            float sums[4];
-            _mm_storeu_ps(sums, sum_vec);
-
-            // --- PASO 6: Guardar en la imagen de salida ---
-            int out_idx = (y * salida.w + x) * salida.c;
-            
-            // Hacemos el clamping (0-255) y guardamos R, G y B.
-            // sums[0] es R, sums[1] es G, sums[2] es B.
-            salida.data[out_idx]     = (unsigned char)min(255.0f, max(0.0f, sums[0]));
-            salida.data[out_idx + 1] = (unsigned char)min(255.0f, max(0.0f, sums[1]));
-            salida.data[out_idx + 2] = (unsigned char)min(255.0f, max(0.0f, sums[2]));
         }
     }
     return salida;
@@ -169,7 +143,7 @@ int main() {
     // Consigue direcciones de imagenes
     vector<string> all_paths = obtener_rutas_imagenes(INPUT_DIRECTORY);
     // Nos quedamos solo con las 8 primeras
-    vector<string> paths(all_paths.begin(), all_paths.begin() + 1000);
+    vector<string> paths(all_paths.begin(), all_paths.begin() + 100);
 
     int img_counter = 1;
     // Itera sobre cada dirección

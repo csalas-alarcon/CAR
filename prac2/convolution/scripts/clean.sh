@@ -3,4 +3,4 @@
 
 rm -rf output
 rm -rf bin
-rm -rf imgs
+rm -rf data

@@ -10,8 +10,9 @@ prac/.venv/
 
 data/
 bin/
-graphics
-graphics/*
+
+graphics/
+graphics/
 
 output/
 .vscode/
