@@ -16,3 +16,7 @@ output/
 .vscode/
 .vscode 
 
+# Practica 2 Intrinsecas
+bin_intrinseca/
+output_intrinseca/
+
