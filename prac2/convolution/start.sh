@@ -16,6 +16,7 @@
 
 set -e
 
+echo "[START]- Empezando Programa"
 echo "[START]- Llamando Script de Descarga"
 ./scripts/dataset.sh
 

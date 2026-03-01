@@ -1,0 +1,9 @@
+----------------------------------------
+          RESUMEN DE TIEMPOS
+----------------------------------------
+Tiempo carga desde disco: 1.69767 s
+Tiempo de convolución (CPU): 27.8943 s
+Tiempo guardado en disco:  19.4134 s
+----------------------------------------
+Tiempo total de ejecución: 49.0436 s
+----------------------------------------
