@@ -4,7 +4,7 @@ set -e
 echo "[VISUALIZATION]- Empezando Programa"
 echo "[VISUALIZATION]- Preparando graphics/"
 mkdir -p graphics
-rm -f graphics/*
+rm -rf graphics/*
 
 echo "[VISUALIZATION]- Creando .venv"
 python -m venv .venv
@@ -18,6 +18,9 @@ python ./scripts/plotting.py
 
 echo "[VISUALIZATION]- Creando Tablas con medias"
 python ./scripts/tables.py
+
+echo "[VISUALIZATION]- Creando Tablas con medias"
+python ./scripts/global.py
 
 echo "[VISUALIZATION]- Borrando .venv"
 rm -rf .venv

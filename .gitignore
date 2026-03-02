@@ -12,7 +12,8 @@ data/
 bin/
 
 graphics/
-graphics/
+
+tiempos/
 
 output/
 .vscode/
