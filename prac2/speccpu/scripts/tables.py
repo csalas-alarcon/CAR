@@ -4,7 +4,7 @@ import os
 import numpy as np
 
 # CONSTANTS
-DATA_DIR = "./metrics/processed"  # Adjusted based on your tree (code/ is a subfolder)
+DATA_DIR = "./data/processed"  # Adjusted based on your tree (code/ is a subfolder)
 GRAPHICS_DIR = "./graphics/"
 DEVICES = {
     "pc_pc": "Sala",

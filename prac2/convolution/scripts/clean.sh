@@ -4,3 +4,4 @@
 rm -rf output
 rm -rf bin
 rm -rf data
+rm -rf tiempos

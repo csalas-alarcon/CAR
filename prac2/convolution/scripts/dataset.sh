@@ -3,7 +3,7 @@
 
 set -e
 
-echo "[DATA]- Creando directorio data/"
+echo "[DATA]- Creando directorio dataset/"
 mkdir -p dataset
 cd dataset
 
@@ -16,8 +16,8 @@ else
     echo "[DATA]- Extrayendo Dataset"
     tar -xzf flowers.tgz
 
-    echo "[DATA]- Limpiando Comprimidos]"
+    echo "[DATA]- Limpiando Comprimidos"
     rm flowers.tgz
 fi
 
-echo "[DATA]- Dataset listo en data/jpg/"
+echo "[DATA]- Dataset listo en dataset/jpg/"

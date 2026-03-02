@@ -4,7 +4,7 @@ import os
 import numpy as np
 
 # CONSTANTES
-DATA_DIR = "./metrics/processed"
+DATA_DIR = "./data/processed"
 GRAPHICS_DIR = "./graphics/plots/"
 METRICS = ["base_O0", "base_O3", "simd_O0", "simd_O3"]
 DEVICES = {

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 
 # CONSTANTS
-DATA_DIR = "./metrics/processed"
+DATA_DIR = "./data/processed"
 GRAPHICS_DIR = "./graphics/"
 COLORS = {"Sala": "tab:blue", "Aula": "tab:orange", "Personal": "tab:green"}
 METRICS = ["cint_base", "cint_peak", "cfp_base", "cfp_peak"]
