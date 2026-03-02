@@ -1,7 +1,7 @@
-#!bin/bash
+#!/bin/bash
 # clean.sh
 
-rm -rf output
-rm -rf bin
-rm -rf data
-rm -rf tiempos
+rm -rf ./output
+rm -rf ./bin
+rm -rf ./dataset
+rm -rf ./tiempos
