@@ -9,8 +9,8 @@ GRAPHICS_DIR = "./graphics/plots/"
 METRICS = ["base_O0", "base_O3", "simd_O0", "simd_O3"]
 DEVICES = {
     "pc_aula": "Aula",
-    "pc_carlos": "Carlos",
-    "pc_jose": "Jose"
+    "pc_carlos": "Sala",
+    "pc_jose": "Personal"
 }
 # Colores para las sub-categorías de tiempo
 COLORS = {

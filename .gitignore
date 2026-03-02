@@ -5,21 +5,22 @@
 *.cubin
 *.fatbin
 
+# Entornos
 .venv/
-prac/.venv/
-
-data/
-bin/
-
-graphics/
-
-tiempos/
-
-output/
 .vscode/
 .vscode 
 
-# Practica 2 Intrinsecas
-bin_intrinseca/
-output_intrinseca/
+# Dataset
+dataset/
+# Ejecutables
+bin/
+# Visualizaciones
+graphics/
+# Archivos Temporales
+tiempos/
+# Resultados
+output/
+
+
+
 

@@ -4,8 +4,8 @@
 set -e
 
 echo "[DATA]- Creando directorio data/"
-mkdir -p data
-cd data
+mkdir -p dataset
+cd dataset
 
 if [ -d "jpg" ] && [ "$(ls -A jpg)" ]; then
     echo "[DATA]- Dataset ya existe, saltando descarga."

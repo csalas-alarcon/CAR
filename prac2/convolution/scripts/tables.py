@@ -8,8 +8,8 @@ DATA_DIR = "./metrics/processed"
 GRAPHICS_DIR = "./graphics/tables/"
 DEVICES = {
     "pc_aula": "Aula",
-    "pc_carlos": "Carlos",
-    "pc_jose": "Jose"
+    "pc_carlos": "Sala",
+    "pc_jose": "Personal"
 }
 METRICS = ["base_O3", "simd_O3"]
 

@@ -7,9 +7,9 @@ import numpy as np
 DATA_DIR = "./metrics/processed"
 GRAPHICS_DIR = "./graphics/tables/"
 DEVICES = {
-    "pc_aula": "aula",
-    "pc_carlos": "carlos",
-    "pc_jose": "jose"
+    "pc_aula": "Aula",
+    "pc_carlos": "Sala",
+    "pc_jose": "Personal"
 }
 METRICS = ["base_O3", "simd_O3"]
 
