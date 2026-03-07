@@ -1,3 +1,6 @@
+#!/bin/bash
+# start.sh
+
 echo "[BASE]- Compilando Proyecto con Librerias" 
 g++ -std=c++17 src/base.cpp -I./vendor -o bin/base_conv_O0 -O0
 g++ -std=c++17 src/base.cpp -I./vendor -o bin/base_conv_O3 -O3

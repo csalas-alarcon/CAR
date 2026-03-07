@@ -5,7 +5,7 @@ import os
 
 # CONSTANTS
 DATA_DIR = "./data/processed"
-GRAPHICS_DIR = "./graphics/"
+GRAPHICS_DIR = "./graphics/plots/"
 COLORS = {"Sala": "tab:blue", "Aula": "tab:orange", "Personal": "tab:green"}
 METRICS = ["cint_base", "cint_peak", "cfp_base", "cfp_peak"]
 DEVICES = {

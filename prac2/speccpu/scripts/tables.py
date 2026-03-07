@@ -4,8 +4,8 @@ import os
 import numpy as np
 
 # CONSTANTS
-DATA_DIR = "./data/processed"  # Adjusted based on your tree (code/ is a subfolder)
-GRAPHICS_DIR = "./graphics/"
+DATA_DIR = "./data/processed"  
+GRAPHICS_DIR = "./graphics/tables/"
 DEVICES = {
     "pc_pc": "Sala",
     "pc_clase": "Aula",
@@ -70,7 +70,7 @@ def generate_spec_tables():
             # Styling
             table.auto_set_font_size(False)
             table.set_fontsize(10)
-            table.scale(1.2, 1.5) # Stretch for readability
+            table.scale(1.2, 1.5) 
             
             # Bold the header and the final score
             for (row, col), cell in table.get_celld().items():
